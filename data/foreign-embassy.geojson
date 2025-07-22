@@ -1,0 +1,850 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "name": "駐日外国公館",
+    "description": "駐日外国公館のデータ",
+    "updated": "2025-07-22"
+  },
+  "features": [
+{
+"type": "Feature", "properties": {"name": "インド大使館", "country": "インド", "type": "大使館", "住所": "東京都千代田区九段南2-2-11" },
+"geometry": {"type": "Point", "coordinates": [139.747467, 35.694096] }
+},
+{
+"type": "Feature", "properties": {"name": "インドネシア共和国大使館", "country": "インドネシア共和国", "type": "大使館", "住所": "東京都品川区東五反田5－2－9" },
+"geometry": {"type": "Point", "coordinates": [139.7211, 35.631508] }
+},
+{
+"type": "Feature", "properties": {"name": "カンボジア王国大使館", "country": "カンボジア王国", "type": "大使館", "住所": "東京都港区赤坂8丁目6-9" },
+"geometry": {"type": "Point", "coordinates": [139.728333, 35.671356] }
+},
+{
+"type": "Feature", "properties": {"name": "シンガポール共和国大使館", "country": "シンガポール共和国", "type": "大使館", "住所": "東京都港区六本木5丁目12-3" },
+"geometry": {"type": "Point", "coordinates": [139.734985, 35.657585] }
+},
+{
+"type": "Feature", "properties": {"name": "シンガポール共和国大使館（商務部・産業部・海運部）", "country": "シンガポール共和国", "type": "大使館", "住所": "東京都千代田区丸の内2-4-1" },
+"geometry": {"type": "Point", "coordinates": [139.763794, 35.681046] }
+},
+{
+"type": "Feature", "properties": {"name": "シンガポール共和国大使館", "country": "シンガポール共和国", "type": "大使館", "住所": "東京都千代田区丸の内2-4-1" },
+"geometry": {"type": "Point", "coordinates": [139.763794, 35.681046] }
+},
+{
+"type": "Feature", "properties": {"name": "シンガポール共和国大使館", "country": "シンガポール共和国", "type": "大使館", "住所": "東京都千代田区丸の内2-4-1" },
+"geometry": {"type": "Point", "coordinates": [139.763794, 35.681046] }
+},
+{
+"type": "Feature", "properties": {"name": "シンガポール共和国大使館（開発部）", "country": "シンガポール共和国", "type": "大使館", "住所": "東京都港区六本木5-11-22" },
+"geometry": {"type": "Point", "coordinates": [139.733398, 35.658436] }
+},
+{
+"type": "Feature", "properties": {"name": "スリランカ民主社会主義共和国大使館", "country": "スリランカ民主社会主義共和国", "type": "大使館", "住所": "東京都港区高輪2丁目1-54" },
+"geometry": {"type": "Point", "coordinates": [139.737488, 35.639194] }
+},
+{
+"type": "Feature", "properties": {"name": "タイ王国大使館", "country": "タイ王国", "type": "大使館", "住所": "東京都品川区上大崎3-14-6" },
+"geometry": {"type": "Point", "coordinates": [139.719833, 35.632088] }
+},
+{
+"type": "Feature", "properties": {"name": "タイ王国大使館（陸・海・空軍武官事務所）", "country": "タイ王国", "type": "大使館", "住所": "東京都目黒区下目黒6-15-21" },
+"geometry": {"type": "Point", "coordinates": [139.699005, 35.629536] }
+},
+{
+"type": "Feature", "properties": {"name": "タイ王国大使館（商務参事官事務所）", "country": "タイ王国", "type": "大使館", "住所": "東京都千代田区麹町5-4" },
+"geometry": {"type": "Point", "coordinates": [139.734039, 35.684734] }
+},
+{
+"type": "Feature", "properties": {"name": "タイ王国大使館（経済投資事務所）", "country": "タイ王国", "type": "大使館", "住所": "東京都港区赤坂2-11-3" },
+"geometry": {"type": "Point", "coordinates": [139.741119, 35.670048] }
+},
+{
+"type": "Feature", "properties": {"name": "タイ王国大使館（農務担当官事務所）", "country": "タイ王国", "type": "大使館", "住所": "東京都目黒区目黒3-13-22" },
+"geometry": {"type": "Point", "coordinates": [139.705292, 35.632629] }
+},
+{
+"type": "Feature", "properties": {"name": "大韓民国大使館", "country": "大韓民国", "type": "大使館", "住所": "東京都港区南麻布1-2-5" },
+"geometry": {"type": "Point", "coordinates": [139.732376, 35.651676] }
+},
+{
+"type": "Feature", "properties": {"name": "大韓民国大使館（領事部）", "country": "大韓民国", "type": "大使館", "住所": "東京都港区南麻布1-7-32" },
+"geometry": {"type": "Point", "coordinates": [139.737045, 35.651279] }
+},
+{
+"type": "Feature", "properties": {"name": "大韓民国大使館（文化部（韓国文化院））", "country": "大韓民国", "type": "大使館", "住所": "東京都新宿区四谷4-4-10" },
+"geometry": {"type": "Point", "coordinates": [139.717651, 35.686989] }
+},
+{
+"type": "Feature", "properties": {"name": "中華人民共和国大使館", "country": "中華人民共和国", "type": "大使館", "住所": "東京都港区元麻布3丁目4-33" },
+"geometry": {"type": "Point", "coordinates": [139.727386, 35.656246] }
+},
+{
+"type": "Feature", "properties": {"name": "中華人民共和国大使館（領事部）", "country": "中華人民共和国", "type": "大使館", "住所": "東京都品川区東五反田4-6-6" },
+"geometry": {"type": "Point", "coordinates": [139.728668, 35.630646] }
+},
+{
+"type": "Feature", "properties": {"name": "ネパール大使館", "country": "ネパール", "type": "大使館", "住所": "東京都目黒区下目黒6-20-28" },
+"geometry": {"type": "Point", "coordinates": [139.697906, 35.627911] }
+},
+{
+"type": "Feature", "properties": {"name": "パキスタン・イスラム共和国大使館", "country": "パキスタン・イスラム共和国", "type": "大使館", "住所": "東京都港区南麻布4-6-17" },
+"geometry": {"type": "Point", "coordinates": [139.727066, 35.650387] }
+},
+{
+"type": "Feature", "properties": {"name": "バングラデシュ人民共和国大使館", "country": "バングラデシュ人民共和国", "type": "大使館", "住所": "東京都千代田区紀尾井町3-29" },
+"geometry": {"type": "Point", "coordinates": [139.738205, 35.681744] }
+},
+{
+"type": "Feature", "properties": {"name": "東ティモール民主共和国大使館", "country": "東ティモール民主共和国", "type": "大使館", "住所": "東京都千代田区富士見1丁目8-9" },
+"geometry": {"type": "Point", "coordinates": [139.744873, 35.697796] }
+},
+{
+"type": "Feature", "properties": {"name": "ブータン王国大使館（兼轄、インド常駐）", "country": "ブータン王国", "type": "大使館", "住所": "Chandra Gupta Marg, Chanakyapuri, New Delhi-110 021, India" },
+"geometry": {"type": "Point", "coordinates": [77.1828667811012, 28.5948564207515] }
+},
+{
+"type": "Feature", "properties": {"name": "フィリピン共和国大使館", "country": "フィリピン共和国", "type": "大使館", "住所": "東京都港区六本木5-15-5" },
+"geometry": {"type": "Point", "coordinates": [139.735184, 35.660061] }
+},
+{
+"type": "Feature", "properties": {"name": "フィリピン共和国大使館（貿易投資部）", "country": "フィリピン共和国", "type": "大使館", "住所": "東京都港区麻布台1-11-9" },
+"geometry": {"type": "Point", "coordinates": [139.743423, 35.660549] }
+},
+{
+"type": "Feature", "properties": {"name": "ブルネイ・ダルサラーム国大使館", "country": "ブルネイ・ダルサラーム国", "type": "大使館", "住所": "東京都品川区北品川6丁目5-2" },
+"geometry": {"type": "Point", "coordinates": [139.732803, 35.625793] }
+},
+{
+"type": "Feature", "properties": {"name": "ベトナム社会主義共和国大使館", "country": "ベトナム社会主義共和国", "type": "大使館", "住所": "東京都渋谷区元代々木町50-11" },
+"geometry": {"type": "Point", "coordinates": [139.685608, 35.672634] }
+},
+{
+"type": "Feature", "properties": {"name": "ベトナム社会主義共和国大使館（武官部）", "country": "ベトナム社会主義共和国", "type": "大使館", "住所": "東京都目黒区大橋2-7-15" },
+"geometry": {"type": "Point", "coordinates": [139.688477, 35.654671] }
+},
+{
+"type": "Feature", "properties": {"name": "マレーシア大使館", "country": "マレーシア", "type": "大使館", "住所": "東京都渋谷区南平台町20-16" },
+"geometry": {"type": "Point", "coordinates": [139.695251, 35.652321] }
+},
+{
+"type": "Feature", "properties": {"name": "ミャンマー連邦共和国大使館", "country": "ミャンマー連邦共和国", "type": "大使館", "住所": "東京都品川区北品川4丁目8-26" },
+"geometry": {"type": "Point", "coordinates": [139.736053, 35.620358] }
+},
+{
+"type": "Feature", "properties": {"name": "ミャンマー連邦共和国大使館（武官部）", "country": "ミャンマー連邦共和国", "type": "大使館", "住所": "東京都品川区東五反田5-12-20" },
+"geometry": {"type": "Point", "coordinates": [139.723892, 35.629303] }
+},
+{
+"type": "Feature", "properties": {"name": "モルディブ共和国大使館", "country": "モルディブ共和国", "type": "大使館", "住所": "東京都千代田区隼町3-7" },
+"geometry": {"type": "Point", "coordinates": [139.742462, 35.681198] }
+},
+{
+"type": "Feature", "properties": {"name": "モンゴル国大使館", "country": "モンゴル国", "type": "大使館", "住所": "東京都渋谷区神山町21-4" },
+"geometry": {"type": "Point", "coordinates": [139.689285, 35.662323] }
+},
+{
+"type": "Feature", "properties": {"name": "ラオス人民民主共和国大使館", "country": "ラオス人民民主共和国", "type": "大使館", "住所": "東京都港区西麻布3丁目3-22" },
+"geometry": {"type": "Point", "coordinates": [139.726715, 35.657982] }
+},
+{
+"type": "Feature", "properties": {"name": "オーストラリア大使館", "country": "オーストラリア", "type": "大使館", "住所": "東京都港区三田2丁目1-14" },
+"geometry": {"type": "Point", "coordinates": [139.738571, 35.651558] }
+},
+{
+"type": "Feature", "properties": {"name": "キリバス共和国大使館（兼轄、本国常駐）", "country": "キリバス共和国", "type": "大使館", "住所": "Ministry of Foreign Affairs and Immigration, Office of Te Beretitenti, Bairiki, Tarawa, Kiribati " },
+"geometry": {"type": "Point", "coordinates": [172.977666075602, 1.32858832061423] }
+},
+{
+"type": "Feature", "properties": {"name": "サモア独立国大使館", "country": "サモア独立国", "type": "大使館", "住所": "港区麻布台3丁目5-7" },
+"geometry": {"type": "Point", "coordinates": [139.739868, 35.660076] }
+},
+{
+"type": "Feature", "properties": {"name": "ソロモン諸島大使館（兼轄、本国常駐）", "country": "ソロモン諸島", "type": "大使館", "住所": "Ministry of Foreign Affairs and External Trade, P.O. Box G10, Honiara, Solomon Islands" },
+"geometry": {"type": "Point", "coordinates": [159.950364934322, -9.42948139618754] }
+},
+{
+"type": "Feature", "properties": {"name": "トンガ王国大使館", "country": "トンガ王国", "type": "大使館", "住所": " 東京都港区麻布台1-9-10" },
+"geometry": {"type": "Point", "coordinates": [139.74202, 35.659966] }
+},
+{
+"type": "Feature", "properties": {"name": "ニュージーランド大使館", "country": "ニュージーランド", "type": "大使館", "住所": "東京都渋谷区神山町20-40" },
+"geometry": {"type": "Point", "coordinates": [139.690048, 35.663757] }
+},
+{
+"type": "Feature", "properties": {"name": "パプアニューギニア大使館", "country": "パプアニューギニア", "type": "大使館", "住所": "東京都目黒区下目黒5丁目32-20" },
+"geometry": {"type": "Point", "coordinates": [139.703262, 35.626678] }
+},
+{
+"type": "Feature", "properties": {"name": "パラオ共和国大使館", "country": "パラオ共和国", "type": "大使館", "住所": "東京都港区東麻布2-21-11" },
+"geometry": {"type": "Point", "coordinates": [139.741547, 35.656429] }
+},
+{
+"type": "Feature", "properties": {"name": "フィジー共和国大使館", "country": "フィジー共和国", "type": "大使館", "住所": "東京都港区麻布台2丁目3-5" },
+"geometry": {"type": "Point", "coordinates": [139.742462, 35.659107] }
+},
+{
+"type": "Feature", "properties": {"name": "マーシャル諸島共和国大使館", "country": "マーシャル諸島共和国", "type": "大使館", "住所": "東京都世田谷区等々力8-2-22" },
+"geometry": {"type": "Point", "coordinates": [139.652603, 35.612976] }
+},
+{
+"type": "Feature", "properties": {"name": "ミクロネシア連邦大使館", "country": "ミクロネシア連邦", "type": "大使館", "住所": "東京都目黒区目黒4-10-6" },
+"geometry": {"type": "Point", "coordinates": [139.704178, 35.631519] }
+},
+{
+"type": "Feature", "properties": {"name": "アメリカ合衆国大使館", "country": "アメリカ合衆国", "type": "大使館", "住所": "東京都港区赤坂1丁目10-5" },
+"geometry": {"type": "Point", "coordinates": [139.743225, 35.668201] }
+},
+{
+"type": "Feature", "properties": {"name": "カナダ大使館", "country": "カナダ", "type": "大使館", "住所": "東京都港区赤坂7丁目3-38" },
+"geometry": {"type": "Point", "coordinates": [139.728806, 35.67326] }
+},
+{
+"type": "Feature", "properties": {"name": "アルゼンチン共和国大使館", "country": "アルゼンチン共和国", "type": "大使館", "住所": "東京都港区元麻布2丁目14-14" },
+"geometry": {"type": "Point", "coordinates": [139.73027, 35.652912] }
+},
+{
+"type": "Feature", "properties": {"name": "アンティグア・バーブーダ大使館（兼轄、本国常駐）", "country": "アンティグア・バーブーダ", "type": "大使館", "住所": "c/o Ministry of Foreign Affairs, International Trade and Immigration, Queen Elizabeth Highway, St. John's, Antigua" },
+"geometry": {"type": "Point", "coordinates": [-61.835120479701, 17.1184104015871] }
+},
+{
+"type": "Feature", "properties": {"name": "ウルグアイ東方共和国大使館", "country": "ウルグアイ東方共和国", "type": "大使館", "住所": "東京都港区芝大門一丁目2－1" },
+"geometry": {"type": "Point", "coordinates": [139.754288, 35.659431] }
+},
+{
+"type": "Feature", "properties": {"name": "エクアドル共和国大使館", "country": "エクアドル共和国", "type": "大使館", "住所": "港区麻布台3-5-7" },
+"geometry": {"type": "Point", "coordinates": [139.739868, 35.660076] }
+},
+{
+"type": "Feature", "properties": {"name": "エルサルバドル共和国大使館", "country": "エルサルバドル共和国", "type": "大使館", "住所": "東京都港区西麻布3－20－5西麻布清美堂ビル（移転：令和4年8月15日）" },
+"geometry": {"type": "Point", "coordinates": [139.725876, 35.660187] }
+},
+{
+"type": "Feature", "properties": {"name": "ガイアナ協同共和国大使館（兼轄、中国常駐）", "country": "ガイアナ協同共和国", "type": "大使館", "住所": "No.1 Xiu Shui Dong Jie, Jian Guo Men Wai, Beijing, China, 100600" },
+"geometry": {"type": "Point", "coordinates": [116.449530896447, 39.9162746309213] }
+},
+{
+"type": "Feature", "properties": {"name": "キューバ共和国大使館", "country": "キューバ共和国", "type": "大使館", "住所": "東京都港区東麻布1丁目28-4" },
+"geometry": {"type": "Point", "coordinates": [139.74382, 35.655285] }
+},
+{
+"type": "Feature", "properties": {"name": "グアテマラ共和国大使館", "country": "グアテマラ共和国", "type": "大使館", "住所": "東京都港区東麻布1-10-11東麻布アベビル4階（移転：令和4年8月22日）" },
+"geometry": {"type": "Point", "coordinates": [139.744598, 35.656834] }
+},
+{
+"type": "Feature", "properties": {"name": "コスタリカ共和国大使館", "country": "コスタリカ共和国", "type": "大使館", "住所": "東京都港区六本木6-6-2" },
+"geometry": {"type": "Point", "coordinates": [139.731445, 35.66177] }
+},
+{
+"type": "Feature", "properties": {"name": "コロンビア共和国大使館", "country": "コロンビア共和国", "type": "大使館", "住所": "東京都品川区上大崎3丁目10-53" },
+"geometry": {"type": "Point", "coordinates": [139.717484, 35.632004] }
+},
+{
+"type": "Feature", "properties": {"name": "コロンビア共和国大使館（商務部）", "country": "コロンビア共和国", "type": "大使館", "住所": "東京都港区六本木1-9-10" },
+"geometry": {"type": "Point", "coordinates": [139.741165, 35.663464] }
+},
+{
+"type": "Feature", "properties": {"name": "ジャマイカ大使館", "country": "ジャマイカ", "type": "大使館", "住所": "東京都港区元麻布2丁目13-1" },
+"geometry": {"type": "Point", "coordinates": [139.730835, 35.654079] }
+},
+{
+"type": "Feature", "properties": {"name": "スリナム共和国大使館（兼轄、中国常駐）", "country": "スリナム共和国", "type": "大使館", "住所": "Room 2-2-22, Jianwai Diplomatic Residence Compound, Jianguomewai Dajie, No.1 Xiushuijie, Chaoyang District、Beijing, China, 100600" },
+"geometry": {"type": "Point", "coordinates": [116.464828215831, 39.9529867756858] }
+},
+{
+"type": "Feature", "properties": {"name": "セントクリストファー・ネービス大使館（兼轄、台湾常駐）", "country": "セントクリストファー・ネービス", "type": "大使館", "住所": "5F、No.9-1、Lane62、Tianmu W. Rd., Taipei 11157、Taiwan、R.O.C." },
+"geometry": {"type": "Point", "coordinates": [121.526133824871, 25.1186025610989] }
+},
+{
+"type": "Feature", "properties": {"name": "セントビンセント及びグレナディーン諸島大使館（兼轄、台湾常駐）", "country": "セントビンセント及びグレナディーン諸島", "type": "大使館", "住所": "6F, No. 9-1, Lane 62, Tianmu W. Rd., Taipei City 11157, Taiwan, Republic of China (Taiwan) " },
+"geometry": {"type": "Point", "coordinates": [121.524369122148, 25.1172085123361] }
+},
+{
+"type": "Feature", "properties": {"name": "チリ共和国大使館", "country": "チリ共和国", "type": "大使館", "住所": "東京都港区芝3丁目1-14" },
+"geometry": {"type": "Point", "coordinates": [139.745743, 35.654144] }
+},
+{
+"type": "Feature", "properties": {"name": "ドミニカ国大使館（兼轄、本国常駐）", "country": "ドミニカ国", "type": "大使館", "住所": "c/o Ministry of Foreign Affairs,  4th Floor, Financial Center, Kennedy Avenue, Roseau, Commonwealth of Dominica" },
+"geometry": {"type": "Point", "coordinates": [-61.3860501509402, 15.3008181623992] }
+},
+{
+"type": "Feature", "properties": {"name": "ドミニカ共和国大使館", "country": "ドミニカ共和国", "type": "大使館", "住所": "東京都千代田区五番町10" },
+"geometry": {"type": "Point", "coordinates": [139.734955, 35.689857] }
+},
+{
+"type": "Feature", "properties": {"name": "トリニダード・トバゴ大使館（兼轄、インド常駐）", "country": "トリニダード・トバゴ", "type": "大使館", "住所": "B-3/26 Vasant Vihar, New Delhi, 110057, India" },
+"geometry": {"type": "Point", "coordinates": [77.16277785705, 28.5681419587046] }
+},
+{
+"type": "Feature", "properties": {"name": "ニカラグア共和国大使館", "country": "ニカラグア共和国", "type": "大使館", "住所": "東京都新宿区山吹町337" },
+"geometry": {"type": "Point", "coordinates": [139.72818, 35.707596] }
+},
+{
+"type": "Feature", "properties": {"name": "ハイチ共和国大使館", "country": "ハイチ共和国", "type": "大使館", "住所": "東京都港区東麻布1丁目10-11" },
+"geometry": {"type": "Point", "coordinates": [139.744598, 35.656834] }
+},
+{
+"type": "Feature", "properties": {"name": "パナマ共和国大使館", "country": "パナマ共和国", "type": "大使館", "住所": "東京都港区六本木3-15-5" },
+"geometry": {"type": "Point", "coordinates": [139.735672, 35.662518] }
+},
+{
+"type": "Feature", "properties": {"name": "バハマ国大使館（兼轄、本国常駐）", "country": "バハマ国", "type": "大使館", "住所": "c/o Ministry of Foreign Affairs, Headquarters,Goodman’s Bay Corporate Centre, Cable Beach, West Bay Street, Nassau, N. P. Commonwealth of The Bahamas. (P. O. Box N-3746)" },
+"geometry": {"type": "Point", "coordinates": [-77.3816502031605, 25.0726646710383] }
+},
+{
+"type": "Feature", "properties": {"name": "パラグアイ共和国大使館", "country": "パラグアイ共和国", "type": "大使館", "住所": "東京都千代田区一番町2-2" },
+"geometry": {"type": "Point", "coordinates": [139.744583, 35.68856] }
+},
+{
+"type": "Feature", "properties": {"name": "バルバドス大使館（兼轄、中国常駐）", "country": "バルバドス", "type": "大使館", "住所": "Villa 09-02, Block A, Liang Ma Qiao Diplomatic Office Compound No.22 Dong Fang Dong Lu, Chaoyang District, Beijing, 100600, China" },
+"geometry": {"type": "Point", "coordinates": [116.465525464205, 39.9510952954848] }
+},
+{
+"type": "Feature", "properties": {"name": "ブラジル連邦共和国大使館", "country": "ブラジル連邦共和国", "type": "大使館", "住所": "東京都港区北青山2丁目11-12" },
+"geometry": {"type": "Point", "coordinates": [139.714493, 35.671062] }
+},
+{
+"type": "Feature", "properties": {"name": "ベネズエラ・ボリバル共和国大使館", "country": "ベネズエラ・ボリバル共和国", "type": "大使館", "住所": "東京都中央区入船2－7－4" },
+"geometry": {"type": "Point", "coordinates": [139.778061, 35.672031] }
+},
+{
+"type": "Feature", "properties": {"name": "ベリーズ大使館（兼轄、台湾常駐）", "country": "ベリーズ", "type": "大使館", "住所": "11F, No. 9 Lane 62, Tien Mou West Road, Shih Lin,  Taipei111, Taiwan, Republic of China (Taiwan)" },
+"geometry": {"type": "Point", "coordinates": [120.586692127663, 24.1860069526975] }
+},
+{
+"type": "Feature", "properties": {"name": "ペルー共和国大使館", "country": "ペルー共和国", "type": "大使館", "住所": "東京都渋谷区広尾2-3-1" },
+"geometry": {"type": "Point", "coordinates": [139.71405, 35.652637] }
+},
+{
+"type": "Feature", "properties": {"name": "ペルー共和国大使館（商務部）", "country": "ペルー共和国", "type": "大使館", "住所": "東京都新宿区西早稲田3-30-16" },
+"geometry": {"type": "Point", "coordinates": [139.711227, 35.713852] }
+},
+{
+"type": "Feature", "properties": {"name": "ボリビア多民族国大使館", "country": "ボリビア多民族国", "type": "大使館", "住所": " 東京都港区芝公園3-4-30" },
+"geometry": {"type": "Point", "coordinates": [139.746796, 35.6586] }
+},
+{
+"type": "Feature", "properties": {"name": "ホンジュラス共和国大使館", "country": "ホンジュラス共和国", "type": "大使館", "住所": "東京都港区東麻布1-10-11" },
+"geometry": {"type": "Point", "coordinates": [139.744598, 35.656834] }
+},
+{
+"type": "Feature", "properties": {"name": "メキシコ合衆国大使館", "country": "メキシコ合衆国", "type": "大使館", "住所": "東京都千代田区永田町2丁目15-1" },
+"geometry": {"type": "Point", "coordinates": [139.739288, 35.676991] }
+},
+{
+"type": "Feature", "properties": {"name": "アイスランド大使館", "country": "アイスランド", "type": "大使館", "住所": "東京都港区高輪4-18-26" },
+"geometry": {"type": "Point", "coordinates": [139.734009, 35.626289] }
+},
+{
+"type": "Feature", "properties": {"name": "アイルランド大使館", "country": "アイルランド", "type": "大使館", "住所": " 東京都新宿区四谷本塩町1-6" },
+"geometry": {"type": "Point", "coordinates": [139.728424, 35.688393] }
+},
+{
+"type": "Feature", "properties": {"name": "アゼルバイジャン共和国大使館", "country": "アゼルバイジャン共和国", "type": "大使館", "住所": "東京都目黒区東が丘1丁目19-15" },
+"geometry": {"type": "Point", "coordinates": [139.668381, 35.626118] }
+},
+{
+"type": "Feature", "properties": {"name": "アルバニア共和国大使館", "country": "アルバニア共和国", "type": "大使館", "住所": "東京都中央区築地6丁目4-8 北國新聞ビル4階" },
+"geometry": {"type": "Point", "coordinates": [139.772522, 35.664833] }
+},
+{
+"type": "Feature", "properties": {"name": "アルメニア共和国大使館", "country": "アルメニア共和国", "type": "大使館", "住所": "東京都港区赤坂1丁目11-36" },
+"geometry": {"type": "Point", "coordinates": [139.741394, 35.668858] }
+},
+{
+"type": "Feature", "properties": {"name": "イタリア大使館", "country": "イタリア", "type": "大使館", "住所": "東京都港区三田2丁目5-4" },
+"geometry": {"type": "Point", "coordinates": [139.742035, 35.650574] }
+},
+{
+"type": "Feature", "properties": {"name": "イタリア大使館（貿易促進部）", "country": "イタリア", "type": "大使館", "住所": "東京都港区南青山1丁目1-1" },
+"geometry": {"type": "Point", "coordinates": [139.724991, 35.672642] }
+},
+{
+"type": "Feature", "properties": {"name": "ウクライナ大使館", "country": "ウクライナ", "type": "大使館", "住所": "東京都港区西麻布3-5-31" },
+"geometry": {"type": "Point", "coordinates": [139.724976, 35.656807] }
+},
+{
+"type": "Feature", "properties": {"name": "ウズベキスタン共和国大使館", "country": "ウズベキスタン共和国", "type": "大使館", "住所": "東京都港区高輪2-1-52" },
+"geometry": {"type": "Point", "coordinates": [139.737488, 35.639194] }
+},
+{
+"type": "Feature", "properties": {"name": "英国大使館", "country": "英国", "type": "大使館", "住所": "東京都千代田区一番町1" },
+"geometry": {"type": "Point", "coordinates": [139.743958, 35.687134] }
+},
+{
+"type": "Feature", "properties": {"name": "エストニア共和国大使館", "country": "エストニア共和国", "type": "大使館", "住所": "東京都渋谷区神宮前2-6-15" },
+"geometry": {"type": "Point", "coordinates": [139.711548, 35.672997] }
+},
+{
+"type": "Feature", "properties": {"name": "オーストリア共和国大使館", "country": "オーストリア共和国", "type": "大使館", "住所": "東京都港区元麻布1丁目1-20" },
+"geometry": {"type": "Point", "coordinates": [139.732727, 35.655586] }
+},
+{
+"type": "Feature", "properties": {"name": "オーストリア共和国大使館（商務部）", "country": "オーストリア共和国", "type": "大使館", "住所": "東京都港区元麻布3-13-3" },
+"geometry": {"type": "Point", "coordinates": [139.731491, 35.655674] }
+},
+{
+"type": "Feature", "properties": {"name": "オーストリア共和国大使館（観光部）", "country": "オーストリア共和国", "type": "大使館", "住所": "東京都港区元麻布3-12-3" },
+"geometry": {"type": "Point", "coordinates": [139.731064, 35.655933] }
+},
+{
+"type": "Feature", "properties": {"name": "オランダ王国大使館", "country": "オランダ王国", "type": "大使館", "住所": "東京都港区芝公園3丁目6-3" },
+"geometry": {"type": "Point", "coordinates": [139.744934, 35.661011] }
+},
+{
+"type": "Feature", "properties": {"name": "カザフスタン共和国大使館", "country": "カザフスタン共和国", "type": "大使館", "住所": "東京都港区麻布台1-8-14" },
+"geometry": {"type": "Point", "coordinates": [139.741653, 35.659927] }
+},
+{
+"type": "Feature", "properties": {"name": "キプロス共和国大使館", "country": "キプロス共和国", "type": "大使館", "住所": "東京都港区南麻布4－6－28" },
+"geometry": {"type": "Point", "coordinates": [139.727066, 35.650387] }
+},
+{
+"type": "Feature", "properties": {"name": "北マケドニア共和国大使館", "country": "北マケドニア共和国", "type": "大使館", "住所": "東京都品川区東五反田5丁目16-17" },
+"geometry": {"type": "Point", "coordinates": [139.722519, 35.628792] }
+},
+{
+"type": "Feature", "properties": {"name": "ギリシャ大使館", "country": "ギリシャ", "type": "大使館", "住所": "東京都港区西麻布3丁目16-30" },
+"geometry": {"type": "Point", "coordinates": [139.72522, 35.658123] }
+},
+{
+"type": "Feature", "properties": {"name": "キルギス共和国大使館", "country": "キルギス共和国", "type": "大使館", "住所": "東京都港区三田1-5-7" },
+"geometry": {"type": "Point", "coordinates": [139.740097, 35.653557] }
+},
+{
+"type": "Feature", "properties": {"name": "クロアチア共和国大使館", "country": "クロアチア共和国", "type": "大使館", "住所": "東京都渋谷区広尾3丁目3-10" },
+"geometry": {"type": "Point", "coordinates": [139.715042, 35.655174] }
+},
+{
+"type": "Feature", "properties": {"name": "コソボ共和国大使館", "country": "コソボ共和国", "type": "大使館", "住所": "東京都港区西新橋3-13-7" },
+"geometry": {"type": "Point", "coordinates": [139.750946, 35.664536] }
+},
+{
+"type": "Feature", "properties": {"name": "サンマリノ共和国大使館", "country": "サンマリノ共和国", "type": "大使館", "住所": "東京都港区元麻布3-5-1" },
+"geometry": {"type": "Point", "coordinates": [139.728668, 35.656071] }
+},
+{
+"type": "Feature", "properties": {"name": "ジョージア大使館", "country": "ジョージア", "type": "大使館", "住所": "東京都港区北青山2-10-22" },
+"geometry": {"type": "Point", "coordinates": [139.715439, 35.672188] }
+},
+{
+"type": "Feature", "properties": {"name": "スイス大使館", "country": "スイス", "type": "大使館", "住所": "東京都港区南麻布5丁目9-12" },
+"geometry": {"type": "Point", "coordinates": [139.723587, 35.653622] }
+},
+{
+"type": "Feature", "properties": {"name": "スウェーデン王国大使館", "country": "スウェーデン王国", "type": "大使館", "住所": "東京都港区赤坂1-12-32アーク森ビル16階（移転：令和5年7月20日）" },
+"geometry": {"type": "Point", "coordinates": [139.741302, 35.667343] }
+},
+{
+"type": "Feature", "properties": {"name": "スペイン王国大使館", "country": "スペイン王国", "type": "大使館", "住所": "東京都港区六本木1丁目3-29" },
+"geometry": {"type": "Point", "coordinates": [139.739914, 35.666088] }
+},
+{
+"type": "Feature", "properties": {"name": "スペイン王国大使館（観光部）", "country": "スペイン王国", "type": "大使館", "住所": "東京都港区虎ノ門3-1-10第2虎の門電気ビルディング6階" },
+"geometry": {"type": "Point", "coordinates": [139.745895, 35.667065] }
+},
+{
+"type": "Feature", "properties": {"name": "スロバキア共和国大使館", "country": "スロバキア共和国", "type": "大使館", "住所": "東京都港区元麻布2-11-33" },
+"geometry": {"type": "Point", "coordinates": [139.730576, 35.654949] }
+},
+{
+"type": "Feature", "properties": {"name": "スロベニア共和国大使館", "country": "スロベニア共和国", "type": "大使館", "住所": "東京都港区南青山7-14-12" },
+"geometry": {"type": "Point", "coordinates": [139.717621, 35.656841] }
+},
+{
+"type": "Feature", "properties": {"name": "セルビア共和国大使館", "country": "セルビア共和国", "type": "大使館", "住所": "東京都港区高輪4丁目16-12" },
+"geometry": {"type": "Point", "coordinates": [139.732956, 35.626564] }
+},
+{
+"type": "Feature", "properties": {"name": "タジキスタン共和国大使館", "country": "タジキスタン共和国", "type": "大使館", "住所": "東京都品川区上大崎1-5-42" },
+"geometry": {"type": "Point", "coordinates": [139.723724, 35.63306] }
+},
+{
+"type": "Feature", "properties": {"name": "チェコ共和国大使館", "country": "チェコ共和国", "type": "大使館", "住所": "東京都渋谷区広尾2丁目16-14" },
+"geometry": {"type": "Point", "coordinates": [139.717163, 35.651928] }
+},
+{
+"type": "Feature", "properties": {"name": "デンマーク王国大使館", "country": "デンマーク王国", "type": "大使館", "住所": "東京都渋谷区猿楽町29-6" },
+"geometry": {"type": "Point", "coordinates": [139.699905, 35.64843] }
+},
+{
+"type": "Feature", "properties": {"name": "ドイツ連邦共和国大使館", "country": "ドイツ連邦共和国", "type": "大使館", "住所": "東京都港区南麻布4丁目5-10" },
+"geometry": {"type": "Point", "coordinates": [139.724869, 35.650166] }
+},
+{
+"type": "Feature", "properties": {"name": "トルクメニスタン大使館", "country": "トルクメニスタン", "type": "大使館", "住所": "東京都渋谷区東2丁目6-14" },
+"geometry": {"type": "Point", "coordinates": [139.710129, 35.653767] }
+},
+{
+"type": "Feature", "properties": {"name": "ノルウェー王国大使館", "country": "ノルウェー王国", "type": "大使館", "住所": "東京都港区芝公園3-4-30" },
+"geometry": {"type": "Point", "coordinates": [139.746796, 35.6586] }
+},
+{
+"type": "Feature", "properties": {"name": "ノルウェー王国大使館（通商技術部・水産部）", "country": "ノルウェー王国", "type": "大使館", "住所": "東京都港区虎ノ門4－3－1" },
+"geometry": {"type": "Point", "coordinates": [139.743912, 35.664398] }
+},
+{
+"type": "Feature", "properties": {"name": "ローマ法王庁大使館", "country": "ローマ法王庁", "type": "大使館", "住所": "東京都千代田区四番町7-3" },
+"geometry": {"type": "Point", "coordinates": [139.738068, 35.688545] }
+},
+{
+"type": "Feature", "properties": {"name": "ハンガリー大使館", "country": "ハンガリー", "type": "大使館", "住所": "東京都港区三田2-17-14" },
+"geometry": {"type": "Point", "coordinates": [139.739655, 35.648575] }
+},
+{
+"type": "Feature", "properties": {"name": "ハンガリー大使館（文化部（リスト・ハンガリー文化センター））", "country": "ハンガリー", "type": "大使館", "住所": "東京都港区麻布十番3-8-1" },
+"geometry": {"type": "Point", "coordinates": [139.734329, 35.653378] }
+},
+{
+"type": "Feature", "properties": {"name": "フィンランド大使館", "country": "フィンランド", "type": "大使館", "住所": "東京都港区南麻布3丁目5-39" },
+"geometry": {"type": "Point", "coordinates": [139.728058, 35.651283] }
+},
+{
+"type": "Feature", "properties": {"name": "フランス大使館", "country": "フランス", "type": "大使館", "住所": "東京都港区南麻布4丁目11-44" },
+"geometry": {"type": "Point", "coordinates": [139.726913, 35.647697] }
+},
+{
+"type": "Feature", "properties": {"name": "ブルガリア共和国大使館", "country": "ブルガリア共和国", "type": "大使館", "住所": "東京都渋谷区代々木5丁目36-3" },
+"geometry": {"type": "Point", "coordinates": [139.690521, 35.673439] }
+},
+{
+"type": "Feature", "properties": {"name": "ベラルーシ共和国大使館", "country": "ベラルーシ共和国", "type": "大使館", "住所": "東京都品川区東五反田5-6-32" },
+"geometry": {"type": "Point", "coordinates": [139.72287, 35.630482] }
+},
+{
+"type": "Feature", "properties": {"name": "ベルギー王国大使館", "country": "ベルギー王国", "type": "大使館", "住所": "東京都千代田区二番町5-4" },
+"geometry": {"type": "Point", "coordinates": [139.736298, 35.685379] }
+},
+{
+"type": "Feature", "properties": {"name": "ポーランド共和国大使館", "country": "ポーランド共和国", "type": "大使館", "住所": "東京都目黒区三田2-13-5" },
+"geometry": {"type": "Point", "coordinates": [139.708862, 35.6394] }
+},
+{
+"type": "Feature", "properties": {"name": "ボスニア・ヘルツェゴビナ大使館", "country": "ボスニア・ヘルツェゴビナ", "type": "大使館", "住所": "東京都港区南麻布5丁目3番29号" },
+"geometry": {"type": "Point", "coordinates": [139.724548, 35.653767] }
+},
+{
+"type": "Feature", "properties": {"name": "ポルトガル大使館", "country": "ポルトガル", "type": "大使館", "住所": "東京都港区西麻布3－6－6" },
+"geometry": {"type": "Point", "coordinates": [139.726151, 35.656006] }
+},
+{
+"type": "Feature", "properties": {"name": "マルタ共和国大使館", "country": "マルタ共和国", "type": "大使館", "住所": "東京都港区虎ノ門4-3-20" },
+"geometry": {"type": "Point", "coordinates": [139.743912, 35.664398] }
+},
+{
+"type": "Feature", "properties": {"name": "モルドバ共和国大使館", "country": "モルドバ共和国", "type": "大使館", "住所": "東京都新宿区榎町72番地" },
+"geometry": {"type": "Point", "coordinates": [139.728745, 35.704926] }
+},
+{
+"type": "Feature", "properties": {"name": "モナコ公国大使館大使館（兼轄、本国常駐）", "country": "モナコ公国", "type": "大使館", "住所": "c/o Ministry of State,2, Place de la Visitation-MC98000 Monaco-Principality of Monaco" },
+"geometry": {"type": "Point", "coordinates": [7.4254251373637, 43.7316482918332] }
+},
+{
+"type": "Feature", "properties": {"name": "モンテネグロ大使館（兼轄、本国常駐）", "country": "モンテネグロ", "type": "大使館", "住所": "c/o Ministry of Foreign Affairs of Montenegro, St. Stanka Dragojevića No. 2, 81000 Podgorica, Montenegro" },
+"geometry": {"type": "Point", "coordinates": [19.2588214261002, 42.4426343974168] }
+},
+{
+"type": "Feature", "properties": {"name": "ラトビア共和国大使館", "country": "ラトビア共和国", "type": "大使館", "住所": "東京都渋谷区神山町37番11号 プリマヴェーラ神山A号室" },
+"geometry": {"type": "Point", "coordinates": [139.691147, 35.665257] }
+},
+{
+"type": "Feature", "properties": {"name": "リトアニア共和国大使館", "country": "リトアニア共和国", "type": "大使館", "住所": "東京都港区元麻布3-7-18" },
+"geometry": {"type": "Point", "coordinates": [139.729752, 35.656666] }
+},
+{
+"type": "Feature", "properties": {"name": "ルーマニア大使館", "country": "ルーマニア", "type": "大使館", "住所": "東京都港区西麻布3丁目16-19" },
+"geometry": {"type": "Point", "coordinates": [139.72522, 35.658123] }
+},
+{
+"type": "Feature", "properties": {"name": "ルクセンブルク大公国大使館", "country": "ルクセンブルク大公国", "type": "大使館", "住所": "東京都千代田区四番町8-9" },
+"geometry": {"type": "Point", "coordinates": [139.737656, 35.68959] }
+},
+{
+"type": "Feature", "properties": {"name": "ロシア連邦大使館", "country": "ロシア連邦", "type": "大使館", "住所": "東京都港区麻布台2丁目1-1" },
+"geometry": {"type": "Point", "coordinates": [139.740936, 35.659107] }
+},
+{
+"type": "Feature", "properties": {"name": "ロシア連邦大使館（通商代表部）", "country": "ロシア連邦", "type": "大使館", "住所": "東京都港区高輪4丁目6番9号" },
+"geometry": {"type": "Point", "coordinates": [139.732635, 35.628197] }
+},
+{
+"type": "Feature", "properties": {"name": "アフガニスタン・イスラム共和国大使館", "country": "アフガニスタン・イスラム共和国", "type": "大使館", "住所": "東京都港区麻布台2-2-1" },
+"geometry": {"type": "Point", "coordinates": [139.743042, 35.658638] }
+},
+{
+"type": "Feature", "properties": {"name": "アラブ首長国連邦大使館", "country": "アラブ首長国連邦", "type": "大使館", "住所": "東京都目黒区下目黒1-8-1" },
+"geometry": {"type": "Point", "coordinates": [139.713303, 35.632729] }
+},
+{
+"type": "Feature", "properties": {"name": "イエメン共和国大使館", "country": "イエメン共和国", "type": "大使館", "住所": "東京都千代田区三番町6－3" },
+"geometry": {"type": "Point", "coordinates": [139.74527, 35.691261] }
+},
+{
+"type": "Feature", "properties": {"name": "イスラエル国大使館", "country": "イスラエル", "type": "大使館", "住所": "東京都千代田区二番町3" },
+"geometry": {"type": "Point", "coordinates": [139.737793, 35.685928] }
+},
+{
+"type": "Feature", "properties": {"name": "イラク共和国大使館", "country": "イラク共和国", "type": "大使館", "住所": "東京都渋谷区神山町14-6" },
+"geometry": {"type": "Point", "coordinates": [139.692978, 35.663174] }
+},
+{
+"type": "Feature", "properties": {"name": "イラン・イスラム共和国大使館", "country": "イラン・イスラム共和国", "type": "大使館", "住所": "東京都港区南麻布3丁目13-9" },
+"geometry": {"type": "Point", "coordinates": [139.7314, 35.648254] }
+},
+{
+"type": "Feature", "properties": {"name": "イラン・イスラム共和国大使館（文化部（イラン文化センター））", "country": "イラン・イスラム共和国", "type": "大使館", "住所": "東京都品川区東五反田5-7-9" },
+"geometry": {"type": "Point", "coordinates": [139.724426, 35.630997] }
+},
+{
+"type": "Feature", "properties": {"name": "オマーン国大使館", "country": "オマーン国", "type": "大使館", "住所": "東京都渋谷区広尾4-2-17" },
+"geometry": {"type": "Point", "coordinates": [139.721786, 35.654194] }
+},
+{
+"type": "Feature", "properties": {"name": "カタール国大使館", "country": "カタール国", "type": "大使館", "住所": "東京都港区元麻布2丁目3-28" },
+"geometry": {"type": "Point", "coordinates": [139.72757, 35.65435] }
+},
+{
+"type": "Feature", "properties": {"name": "クウェート国大使館", "country": "クウェート国", "type": "大使館", "住所": "東京都港区三田4丁目13-12" },
+"geometry": {"type": "Point", "coordinates": [139.741058, 35.644978] }
+},
+{
+"type": "Feature", "properties": {"name": "サウジアラビア王国大使館", "country": "サウジアラビア王国", "type": "大使館", "住所": "東京都港区六本木1丁目8-4" },
+"geometry": {"type": "Point", "coordinates": [139.739273, 35.663361] }
+},
+{
+"type": "Feature", "properties": {"name": "サウジアラビア王国大使館（文化部）", "country": "サウジアラビア王国", "type": "大使館", "住所": "東京都中野区中央2-37-3" },
+"geometry": {"type": "Point", "coordinates": [139.678741, 35.701294] }
+},
+{
+"type": "Feature", "properties": {"name": "シリア・アラブ共和国大使館", "country": "シリア・アラブ共和国", "type": "大使館", "住所": "東京都港区赤坂6丁目19-45" },
+"geometry": {"type": "Point", "coordinates": [139.734299, 35.667645] }
+},
+{
+"type": "Feature", "properties": {"name": "トルコ共和国大使館", "country": "トルコ共和国", "type": "大使館", "住所": "東京都渋谷区神宮前2丁目33-6" },
+"geometry": {"type": "Point", "coordinates": [139.708145, 35.672791] }
+},
+{
+"type": "Feature", "properties": {"name": "トルコ共和国大使館（商務部）", "country": "トルコ共和国", "type": "大使館", "住所": "東京都港区北青山1-2-7" },
+"geometry": {"type": "Point", "coordinates": [139.723206, 35.673054] }
+},
+{
+"type": "Feature", "properties": {"name": "バーレーン王国大使館", "country": "バーレーン王国", "type": "大使館", "住所": "東京都港区赤坂1丁目11-36" },
+"geometry": {"type": "Point", "coordinates": [139.741394, 35.668858] }
+},
+{
+"type": "Feature", "properties": {"name": "ヨルダン・ハシェミット王国大使館", "country": "ヨルダン", "type": "大使館", "住所": "東京都渋谷区神山町39-8" },
+"geometry": {"type": "Point", "coordinates": [139.691727, 35.664349] }
+},
+{
+"type": "Feature", "properties": {"name": "ヨルダン・ハシェミット王国大使館（武官部）", "country": "ヨルダン", "type": "大使館", "住所": "東京都中央区湊2-11-1" },
+"geometry": {"type": "Point", "coordinates": [139.780029, 35.671665] }
+},
+{
+"type": "Feature", "properties": {"name": "レバノン共和国大使館", "country": "レバノン共和国", "type": "大使館", "住所": "東京都目黒区東山2－6－9" },
+"geometry": {"type": "Point", "coordinates": [139.690247, 35.649258] }
+},
+{
+"type": "Feature", "properties": {"name": "アルジェリア民主人民共和国大使館", "country": "アルジェリア民主人民共和国", "type": "大使館", "住所": "東京都目黒区三田2丁目10-67" },
+"geometry": {"type": "Point", "coordinates": [139.709991, 35.639072] }
+},
+{
+"type": "Feature", "properties": {"name": "アンゴラ共和国大使館", "country": "アンゴラ共和国", "type": "大使館", "住所": "東京都世田谷区代沢2-10-24" },
+"geometry": {"type": "Point", "coordinates": [139.67305, 35.656673] }
+},
+{
+"type": "Feature", "properties": {"name": "ウガンダ共和国大使館", "country": "ウガンダ共和国", "type": "大使館", "住所": "東京都港区赤坂9-6-44" },
+"geometry": {"type": "Point", "coordinates": [139.728485, 35.667004] }
+},
+{
+"type": "Feature", "properties": {"name": "エジプト・アラブ共和国大使館", "country": "エジプト・アラブ共和国", "type": "大使館", "住所": "東京都目黒区青葉台1丁目5-4" },
+"geometry": {"type": "Point", "coordinates": [139.698685, 35.649071] }
+},
+{
+"type": "Feature", "properties": {"name": "エジプト・アラブ共和国大使館（文化・教育・科学部）", "country": "エジプト・アラブ共和国", "type": "大使館", "住所": "東京都目黒区東が丘1-19-17" },
+"geometry": {"type": "Point", "coordinates": [139.668335, 35.626358] }
+},
+{
+"type": "Feature", "properties": {"name": "エスワティニ王国大使館（兼轄、マレーシア常駐）", "country": "エスワティニ王国", "type": "大使館", "住所": "Menara Citibank 22nd Floor, Suite 03 &. 03A, 165, Jalan Ampang, 50450 Kuala Lumpur, Malaysia" },
+"geometry": {"type": "Point", "coordinates": [101.717462860366, 3.15988779382293] }
+},
+{
+"type": "Feature", "properties": {"name": "エチオピア連邦民主共和国大使館", "country": "エチオピア連邦民主共和国", "type": "大使館", "住所": "東京都港区高輪3丁目4-1" },
+"geometry": {"type": "Point", "coordinates": [139.731705, 35.634796] }
+},
+{
+"type": "Feature", "properties": {"name": "エリトリア国大使館", "country": "エリトリア国", "type": "大使館", "住所": "東京都港区白金台4丁目7-4" },
+"geometry": {"type": "Point", "coordinates": [139.725876, 35.638065] }
+},
+{
+"type": "Feature", "properties": {"name": "ガーナ共和国大使館", "country": "ガーナ共和国", "type": "大使館", "住所": "東京都港区西麻布1丁目5-21" },
+"geometry": {"type": "Point", "coordinates": [139.725418, 35.661598] }
+},
+{
+"type": "Feature", "properties": {"name": "カーボベルデ共和国大使館（兼轄、中国常駐）", "country": "カーボベルデ共和国", "type": "大使館", "住所": "No.5-1-71, Ta Yuan Diplomatic Compound, No1, Xindong Road, Chaoyang District, Beijing, China" },
+"geometry": {"type": "Point", "coordinates": [116.450132560649, 39.945152794586] }
+},
+{
+"type": "Feature", "properties": {"name": "ガボン共和国大使館", "country": "ガボン共和国", "type": "大使館", "住所": "東京都目黒区東が丘1-34-11" },
+"geometry": {"type": "Point", "coordinates": [139.666443, 35.630604] }
+},
+{
+"type": "Feature", "properties": {"name": "カメルーン共和国大使館", "country": "カメルーン共和国", "type": "大使館", "住所": "東京都世田谷区野沢3丁目27-16" },
+"geometry": {"type": "Point", "coordinates": [139.674484, 35.632225] }
+},
+{
+"type": "Feature", "properties": {"name": "ギニア共和国大使館", "country": "ギニア共和国", "type": "大使館", "住所": "東京都渋谷区鉢山町12-9" },
+"geometry": {"type": "Point", "coordinates": [139.696671, 35.651714] }
+},
+{
+"type": "Feature", "properties": {"name": "ギニアビサウ共和国大使館（兼轄、中国常駐）", "country": "ギニアビサウ共和国", "type": "大使館", "住所": "4-2-112, No.1, Xing Dong Road, Chao Yang District, Beijing, China" },
+"geometry": {"type": "Point", "coordinates": [116.941962704365, 40.281393644953] }
+},
+{
+"type": "Feature", "properties": {"name": "ケニア共和国大使館", "country": "ケニア共和国", "type": "大使館", "住所": "東京都目黒区八雲3丁目24-3" },
+"geometry": {"type": "Point", "coordinates": [139.666428, 35.614491] }
+},
+{
+"type": "Feature", "properties": {"name": "コートジボワール共和国大使館", "country": "コートジボワール", "type": "大使館", "住所": "東京都渋谷区上原2丁目19-12" },
+"geometry": {"type": "Point", "coordinates": [139.682449, 35.664604] }
+},
+{
+"type": "Feature", "properties": {"name": "コモロ連合大使館（兼轄、中国常駐）", "country": "コモロ連合", "type": "大使館", "住所": "Apt2-2-122, Jianguomenwai DRC, No1 Silk str., Chaoyang District, Beijing, China" },
+"geometry": {"type": "Point", "coordinates": [116.457595619132, 39.9346567099683] }
+},
+{
+"type": "Feature", "properties": {"name": "コンゴ共和国大使館", "country": "コンゴ共和国", "type": "大使館", "住所": "東京都大田区田園調布3丁目16-4" },
+"geometry": {"type": "Point", "coordinates": [139.663681, 35.59547] }
+},
+{
+"type": "Feature", "properties": {"name": "コンゴ民主共和国大使館", "country": "コンゴ民主共和国", "type": "大使館", "住所": "東京都港区南青山2-9-21" },
+"geometry": {"type": "Point", "coordinates": [139.721786, 35.67017] }
+},
+{
+"type": "Feature", "properties": {"name": "ザンビア共和国大使館", "country": "ザンビア共和国", "type": "大使館", "住所": "東京都品川区荏原1丁目10-2" },
+"geometry": {"type": "Point", "coordinates": [139.715332, 35.620708] }
+},
+{
+"type": "Feature", "properties": {"name": "シエラレオネ共和国大使館（兼轄、中国常駐）", "country": "シエラレオネ共和国", "type": "大使館", "住所": "7, Dong Zhi Men Wai Da Jie, Chao Yang District, Beijing, People's Republic of China. 100600" },
+"geometry": {"type": "Point", "coordinates": [116.456824092741, 39.9416815401782] }
+},
+{
+"type": "Feature", "properties": {"name": "ジブチ共和国大使館", "country": "ジブチ共和国", "type": "大使館", "住所": "東京都品川区北品川5-13-1" },
+"geometry": {"type": "Point", "coordinates": [139.733109, 35.622841] }
+},
+{
+"type": "Feature", "properties": {"name": "ジンバブエ共和国大使館", "country": "ジンバブエ共和国", "type": "大使館", "住所": "東京都港区三田5－4－3三田プラザビル6階" },
+"geometry": {"type": "Point", "coordinates": [139.738892, 35.647621] }
+},
+{
+"type": "Feature", "properties": {"name": "スーダン共和国大使館", "country": "スーダン共和国", "type": "大使館", "住所": "東京都目黒区八雲4-7-1" },
+"geometry": {"type": "Point", "coordinates": [139.672012, 35.62381] }
+},
+{
+"type": "Feature", "properties": {"name": "セーシェル共和国大使館（兼轄、中国常駐）", "country": "セーシェル共和国", "type": "大使館", "住所": "No. 6-2-121, Jian GuoMenwai Diplomatic Compound, No.1, Xiu Shui Road, Chaoyang District, Beijing, China" },
+"geometry": {"type": "Point", "coordinates": [116.451651715156, 39.9199164103251] }
+},
+{
+"type": "Feature", "properties": {"name": "赤道ギニア共和国大使館（兼轄、中国常駐）", "country": "赤道ギニア共和国", "type": "大使館", "住所": "No2, San Li Tun, Dong Si Jie, Chaoyang District, Beijing, China" },
+"geometry": {"type": "Point", "coordinates": [116.458403016134, 39.9393979287609] }
+},
+{
+"type": "Feature", "properties": {"name": "セネガル共和国大使館", "country": "セネガル共和国", "type": "大使館", "住所": "東京都目黒区青葉台1丁目3-4" },
+"geometry": {"type": "Point", "coordinates": [139.696762, 35.649601] }
+},
+{
+"type": "Feature", "properties": {"name": "タンザニア連合共和国大使館", "country": "タンザニア連合共和国", "type": "大使館", "住所": "東京都世田谷区上用賀4丁目21-9" },
+"geometry": {"type": "Point", "coordinates": [139.628769, 35.636887] }
+},
+{
+"type": "Feature", "properties": {"name": "チャド共和国大使館（兼轄、中国常駐）", "country": "チャド共和国", "type": "大使館", "住所": "Tayuan Diplomatic Residence Compound 4-2-41 No.1, Xin Dong Lu, Beijing, China" },
+"geometry": {"type": "Point", "coordinates": [116.464472402134, 39.9523796329014] }
+},
+{
+"type": "Feature", "properties": {"name": "チュニジア共和国大使館", "country": "チュニジア共和国", "type": "大使館", "住所": "東京都千代田区九段南3-6-6" },
+"geometry": {"type": "Point", "coordinates": [139.743454, 35.69273] }
+},
+{
+"type": "Feature", "properties": {"name": "トーゴ共和国大使館", "country": "トーゴ共和国", "type": "大使館", "住所": "東京都目黒区八雲2-2-4" },
+"geometry": {"type": "Point", "coordinates": [139.670807, 35.620094] }
+},
+{
+"type": "Feature", "properties": {"name": "ナイジェリア連邦共和国大使館", "country": "ナイジェリア連邦共和国", "type": "大使館", "住所": "東京都港区虎ノ門3丁目6-1" },
+"geometry": {"type": "Point", "coordinates": [139.745758, 35.666004] }
+},
+{
+"type": "Feature", "properties": {"name": "ナミビア共和国大使館", "country": "ナミビア共和国", "type": "大使館", "住所": "東京都港区麻布台3-5-7" },
+"geometry": {"type": "Point", "coordinates": [139.739868, 35.660076] }
+},
+{
+"type": "Feature", "properties": {"name": "ニジェール共和国大使館（兼轄、中国常駐）", "country": "ニジェール共和国", "type": "大使館", "住所": "1-21 Bangonglou Sanlitun Diplomatic Compound, Beijing, China" },
+"geometry": {"type": "Point", "coordinates": [116.465097160788, 39.9528095298593] }
+},
+{
+"type": "Feature", "properties": {"name": "ブルキナファソ大使館", "country": "ブルキナファソ", "type": "大使館", "住所": "東京都渋谷区大山町45-24" },
+"geometry": {"type": "Point", "coordinates": [139.677551, 35.669189] }
+},
+{
+"type": "Feature", "properties": {"name": "ブルンジ共和国大使館（兼轄、中国常駐）", "country": "ブルンジ共和国", "type": "大使館", "住所": "25, Guang Hua Lu, Jian Guo Men, Chaoyang District, Beijing, China" },
+"geometry": {"type": "Point", "coordinates": [116.437779492904, 39.9136874037393] }
+},
+{
+"type": "Feature", "properties": {"name": "ベナン共和国大使館", "country": "ベナン共和国", "type": "大使館", "住所": "東京都文京区春日1-11-14" },
+"geometry": {"type": "Point", "coordinates": [139.746841, 35.710121] }
+},
+{
+"type": "Feature", "properties": {"name": "ボツワナ共和国大使館", "country": "ボツワナ共和国", "type": "大使館", "住所": "東京都港区芝4丁目5-10" },
+"geometry": {"type": "Point", "coordinates": [139.750885, 35.648712] }
+},
+{
+"type": "Feature", "properties": {"name": "マダガスカル共和国大使館", "country": "マダガスカル共和国", "type": "大使館", "住所": "東京都港区元麻布2丁目3-23" },
+"geometry": {"type": "Point", "coordinates": [139.72757, 35.65435] }
+},
+{
+"type": "Feature", "properties": {"name": "マラウイ共和国大使館", "country": "マラウイ共和国", "type": "大使館", "住所": "東京都港区高輪3丁目4-1" },
+"geometry": {"type": "Point", "coordinates": [139.731705, 35.634796] }
+},
+{
+"type": "Feature", "properties": {"name": "マリ共和国大使館", "country": "マリ共和国", "type": "大使館", "住所": "東京都品川区上大崎3丁目12-9" },
+"geometry": {"type": "Point", "coordinates": [139.718689, 35.630798] }
+},
+{
+"type": "Feature", "properties": {"name": "南アフリカ共和国大使館", "country": "南アフリカ共和国", "type": "大使館", "住所": "東京都千代田区麹町1-4" },
+"geometry": {"type": "Point", "coordinates": [139.743439, 35.684322] }
+},
+{
+"type": "Feature", "properties": {"name": "南スーダン共和国大使館", "country": "南スーダン共和国", "type": "大使館", "住所": "東京都港区赤坂2丁目21-15" },
+"geometry": {"type": "Point", "coordinates": [139.738708, 35.668713] }
+},
+{
+"type": "Feature", "properties": {"name": "モザンビーク共和国大使館", "country": "モザンビーク共和国", "type": "大使館", "住所": "東京都世田谷区桜新町1-33-14" },
+"geometry": {"type": "Point", "coordinates": [139.643387, 35.627796] }
+},
+{
+"type": "Feature", "properties": {"name": "モーリシャス共和国大使館（兼轄、オーストラリア常駐）", "country": "モーリシャス共和国", "type": "大使館", "住所": "2 Beale Crescent, Deakin, ACT, 2600, Australia" },
+"geometry": {"type": "Point", "coordinates": [149.09262812157, -35.3238531748069] }
+},
+{
+"type": "Feature", "properties": {"name": "モーリタニア・イスラム共和国大使館", "country": "モーリタニア・イスラム共和国", "type": "大使館", "住所": "東京都目黒区五本木1-16-17" },
+"geometry": {"type": "Point", "coordinates": [139.687775, 35.63866] }
+},
+{
+"type": "Feature", "properties": {"name": "モロッコ王国大使館", "country": "モロッコ王国", "type": "大使館", "住所": "東京都港区南青山5-4-30" },
+"geometry": {"type": "Point", "coordinates": [139.714432, 35.662231] }
+},
+{
+"type": "Feature", "properties": {"name": "リビア国大使館", "country": "リビア国", "type": "大使館", "住所": "東京都渋谷区代官山町10-14" },
+"geometry": {"type": "Point", "coordinates": [139.704132, 35.65147] }
+},
+{
+"type": "Feature", "properties": {"name": "リベリア共和国大使館", "country": "リベリア共和国", "type": "大使館", "住所": "東京都新宿区市谷砂土原町1－2－61" },
+"geometry": {"type": "Point", "coordinates": [139.734924, 35.695187] }
+},
+{
+"type": "Feature", "properties": {"name": "ルワンダ共和国大使館", "country": "ルワンダ共和国", "type": "大使館", "住所": "東京都世田谷区深沢1丁目17-17" },
+"geometry": {"type": "Point", "coordinates": [139.661835, 35.6171] }
+},
+{
+"type": "Feature", "properties": {"name": "レソト王国大使館", "country": "レソト王国", "type": "大使館", "住所": "東京都港区赤坂7-5-47" },
+"geometry": {"type": "Point", "coordinates": [139.730377, 35.672016] }
+}
+  ]
+}
