@@ -27,7 +27,7 @@ const MAP_CONFIG = {
     style: 'https://tile.openstreetmap.jp/styles/osm-bright-ja/style.json', // OSM日本語ベクトルスタイル
     center: [139.6917, 35.6895], // 東京駅の座標
     zoom: 10,
-    minZoom: 3,
+    minZoom: 1,
     maxZoom: 18
 };
 

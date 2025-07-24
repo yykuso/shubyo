@@ -33,6 +33,210 @@ body {
     align-items: center;
 }
 
+.layer-control {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: white;
+    transition: box-shadow 0.2s ease;
+}
+
+.layer-control:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.layer-control.expanded {
+    background-color: #f8f9fa;
+}
+
+.layer-header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    color: #333;
+}
+
+.layer-title {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.layer-actions {
+    display: flex;
+    gap: 5px;
+    margin-left: 10px;
+}
+
+.info-button {
+    background: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.7em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.info-button:hover {
+    background: #138496;
+}
+
+.filter-button {
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 0.6em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.filter-button:hover {
+    background: #218838;
+}
+
+.filter-button.active {
+    background: #ffc107;
+    color: #212529;
+}
+
+.filter-button.active:hover {
+    background: #e0a800;
+}
+
+.layer-metadata {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e3f2fd;
+    border-left: 3px solid #2196f3;
+    border-radius: 4px;
+    font-size: 0.85em;
+    display: none;
+}
+
+.layer-metadata.visible {
+    display: block;
+}
+
+.layer-metadata h5 {
+    margin: 0 0 8px 0;
+    color: #1976d2;
+    font-size: 0.9em;
+}
+
+.layer-metadata p {
+    margin: 4px 0;
+    color: #424242;
+}
+
+.layer-metadata .metadata-item {
+    display: flex;
+    margin-bottom: 4px;
+}
+
+.layer-metadata .metadata-label {
+    font-weight: 600;
+    color: #1976d2;
+    min-width: 60px;
+    margin-right: 8px;
+}
+
+.layer-metadata .metadata-value {
+    color: #424242;
+}
+
+.layer-header input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.layer-description {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #666;
+    line-height: 1.4;
+}
+
+.layer-filters {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #e0e0e0;
+    display: none;
+}
+
+.layer-filters.visible {
+    display: block;
+}
+
+.layer-filters h4 {
+    margin: 0 0 8px 0;
+    font-size: 0.9em;
+    color: #555;
+    font-weight: 600;
+}
+
+.layer-filter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.layer-filter-tag {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 15px;
+    padding: 3px 10px;
+    font-size: 0.75em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.layer-filter-tag.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.layer-filter-tag:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.layer-filter-tag.active:hover {
+    background: #0056b3;
+    border-color: #0056b3;
+}
+
+.layer-clear-filters {
+    background: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 3px 8px;
+    font-size: 0.7em;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.layer-clear-filters:hover {
+    background: #5a6268;
+}
+
 #toggle-sidebar {
     background: none;
     border: none;
@@ -55,39 +259,6 @@ body {
 #map {
     width: 100%;
     height: 100%;
-}
-
-.layer-control {
-    margin-bottom: 15px;
-    padding: 12px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    background-color: white;
-    transition: box-shadow 0.2s ease;
-}
-
-.layer-control:hover {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.layer-control label {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-weight: 500;
-    color: #333;
-}
-
-.layer-control input[type="checkbox"] {
-    margin-right: 10px;
-    transform: scale(1.2);
-}
-
-.layer-description {
-    margin-top: 8px;
-    font-size: 0.9em;
-    color: #666;
-    line-height: 1.4;
 }
 
 .layer-style-indicator {
