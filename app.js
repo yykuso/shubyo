@@ -13,6 +13,11 @@ class GeoJSONMapViewer {
         this.initMap();
         this.initUI();
         this.initSidebarToggle();
+        
+        // ページ読み込み完了後にトランジションを有効化
+        setTimeout(() => {
+            document.body.classList.remove('preload');
+        }, 100);
     }
 
     initSidebarToggle() {
@@ -20,9 +25,13 @@ class GeoJSONMapViewer {
         const toggleButton = document.getElementById('toggle-sidebar');
         const mobileToggle = document.getElementById('mobile-toggle');
 
-        // デスクトップでは初期状態で開いている
+        // 初期状態を即座に設定（チラつき防止）
         if (window.innerWidth > 768) {
             sidebar.classList.remove('collapsed');
+            mobileToggle.classList.add('hidden');
+        } else {
+            sidebar.classList.add('collapsed');
+            mobileToggle.classList.remove('hidden');
         }
 
         // サイドバー内のトグルボタン
@@ -76,6 +85,16 @@ class GeoJSONMapViewer {
 
         this.map.addControl(new maplibregl.NavigationControl(), 'top-right');
         this.map.addControl(new maplibregl.ScaleControl(), 'bottom-left');
+        
+        // 位置情報コントロールを追加
+        this.map.addControl(new maplibregl.GeolocateControl({
+            positionOptions: {
+                enableHighAccuracy: true
+            },
+            fitBoundsOptions: {maxZoom: 15},
+            trackUserLocation: true,
+            showUserLocation: true
+        }), 'top-right');
 
         this.map.on('load', () => {
             console.log('Map loaded successfully');
