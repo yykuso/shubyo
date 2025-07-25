@@ -32,17 +32,29 @@ body {
     transition: transform 0.3s ease;
     touch-action: pan-y;
     -webkit-overflow-scrolling: touch;
-    transform: translateX(-100%); /* デフォルトで非表示 */
+    transform: translateX(0); /* デフォルトで表示 */
 }
 
 #sidebar.collapsed {
     transform: translateX(-100%);
 }
 
-/* デスクトップでのみ表示 */
-@media (min-width: 769px) {
+/* モバイルでは初期状態で非表示 */
+@media (max-width: 768px) {
     #sidebar {
-        transform: translateX(0); /* デスクトップでは表示 */
+        transform: translateX(-100%); /* モバイルでは非表示 */
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        height: 100dvh;
+        width: 280px;
+        z-index: 1000;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+    }
+    
+    #sidebar:not(.collapsed) {
+        transform: translateX(0); /* モバイルで開く場合は表示 */
     }
 }
 
@@ -334,20 +346,6 @@ body {
 @media (max-width: 768px) {
     #app {
         flex-direction: row;
-    }
-    
-    #sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 280px;
-        z-index: 1000;
-        box-shadow: 2px 0 10px rgba(0,0,0,0.3);
-    }
-    
-    #sidebar.collapsed {
-        transform: translateX(-100%);
     }
     
     #map-container {
