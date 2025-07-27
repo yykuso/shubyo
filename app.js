@@ -83,7 +83,7 @@ class GeoJSONMapViewer {
             maxZoom: MAP_CONFIG.maxZoom
         });
 
-        this.map.addControl(new maplibregl.NavigationControl(), 'top-right');
+        this.map.addControl(new maplibregl.NavigationControl(), 'bottom-right');
         this.map.addControl(new maplibregl.ScaleControl(), 'bottom-left');
         
         // 位置情報コントロールを追加
@@ -94,7 +94,7 @@ class GeoJSONMapViewer {
             fitBoundsOptions: {maxZoom: 15},
             trackUserLocation: true,
             showUserLocation: true
-        }), 'top-right');
+        }), 'bottom-right');
 
         this.map.on('load', () => {
             console.log('Map loaded successfully');
@@ -439,6 +439,14 @@ class GeoJSONMapViewer {
     }
 
     getLayerColor(layer) {
+        // まずGeoJSONデータからmetadataのcolorを取得を試みる
+        const layerId = layer.id;
+        const geojsonData = this.layerData.get(layerId);
+        if (geojsonData?.metadata?.color) {
+            return geojsonData.metadata.color;
+        }
+        
+        // フォールバック：レイヤー設定から取得
         if (layer.style.paint) {
             return layer.style.paint['circle-color'] || 
                    layer.style.paint['line-color'] || 
@@ -446,6 +454,21 @@ class GeoJSONMapViewer {
                    '#000000';
         }
         return '#000000';
+    }
+
+    // 色を暗くするヘルパーメソッド
+    getDarkerColor(color) {
+        // HEX色の場合
+        if (color.startsWith('#')) {
+            const hex = color.slice(1);
+            const num = parseInt(hex, 16);
+            const r = Math.max(0, (num >> 16) - 40);
+            const g = Math.max(0, ((num >> 8) & 0x00FF) - 40);
+            const b = Math.max(0, (num & 0x0000FF) - 40);
+            return `#${((r << 16) | (g << 8) | b).toString(16).padStart(6, '0')}`;
+        }
+        // その他の色形式の場合はそのまま返す
+        return color;
     }
 
     async loadInitialLayers() {
@@ -483,13 +506,25 @@ class GeoJSONMapViewer {
                 data: geojsonData
             });
 
+            // metadataからカラーを取得（ない場合は黒を使用）
+            const mainColor = geojsonData.metadata?.color || '#000000';
+            
+            // レイヤーのスタイルをコピーして、metadataのcolorを適用
+            const layerStyle = {
+                ...layer.style,
+                paint: {
+                    ...layer.style.paint,
+                    'circle-color': mainColor
+                }
+            };
+
             // レイヤーを追加
             this.map.addLayer({
                 id: layer.id,
-                type: layer.style.type,
+                type: layerStyle.type,
                 source: layer.id,
-                paint: layer.style.paint,
-                layout: layer.style.layout || {}
+                paint: layerStyle.paint,
+                layout: layerStyle.layout || {}
             });
 
             // 収鋲状態に応じたスタイルを適用
@@ -718,186 +753,60 @@ class GeoJSONMapViewer {
                     isAlreadyShubyo = history.length > 0;
                 }
 
-                // リッチなポップアップコンテンツを作成
+                // メタデータからメインカラーを取得（ない場合は黒を設定）
+                const mainColor = metadata?.color || '#000000';
+
+                // コンパクトなポップアップコンテンツを作成
                 let popupContent = `
-                    <div style="
-                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                        min-width: 280px;
-                        max-width: 350px;
-                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                        border-radius: 12px;
-                        overflow: hidden;
-                        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-                        margin: -15px;
-                    ">
+                    <div class="custom-popup">
                         <!-- ヘッダー部分 -->
-                        <div style="
-                            background: rgba(255,255,255,0.95);
-                            padding: 16px;
-                            border-bottom: 1px solid rgba(0,0,0,0.1);
-                        ">
-                            <div style="
-                                display: flex;
-                                align-items: center;
-                                margin-bottom: 8px;
-                            ">
-                                <div style="
-                                    width: 40px;
-                                    height: 40px;
-                                    background: linear-gradient(135deg, #667eea, #764ba2);
-                                    border-radius: 50%;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: center;
-                                    margin-right: 12px;
-                                    color: white;
-                                    font-size: 18px;
-                                    font-weight: bold;
-                                ">
-                                    🏛️
+                        <div class="popup-header">
+                            <div class="popup-header-content">
+                                <div class="popup-icon" style="background: linear-gradient(135deg, ${mainColor}, ${this.getDarkerColor(mainColor)});">
+                                    ${properties.icon || '📍'}
                                 </div>
-                                <div style="flex: 1;">
-                                    <h3 style="
-                                        margin: 0;
-                                        font-size: 16px;
-                                        font-weight: 600;
-                                        color: #2c3e50;
-                                        line-height: 1.3;
-                                    ">${locationName}</h3>
-                                    <div style="
-                                        font-size: 12px;
-                                        color: #7f8c8d;
-                                        margin-top: 2px;
-                                    ">${layer.name}</div>
+                                <div class="popup-info">
+                                    <h3 class="popup-title">${locationName}</h3>
+                                    <div class="popup-subtitle">${layer.name}</div>
                                 </div>
                             </div>
                         </div>
                         
                         <!-- コンテンツ部分 -->
-                        <div style="
-                            background: rgba(255,255,255,0.98);
-                            padding: 16px;
-                        ">
+                        <div class="popup-content">
                 `;
 
-                // プロパティを整理して表示
+                // プロパティを整理して表示（iconは除外）
                 const displayProperties = Object.entries(properties).filter(([key, value]) => 
-                    key !== 'id' && key !== 'name' && value && value.toString().trim() !== ''
+                    key !== 'id' && key !== 'name' && key !== 'icon' && value && value.toString().trim() !== ''
                 );
 
-                displayProperties.forEach(([key, value]) => {
-                    let icon = '📍';
-                    let label = key;
-                    
-                    // キーに応じてアイコンとラベルを設定
-                    switch(key.toLowerCase()) {
-                        case 'name':
-                            icon = '🏛️';
-                            label = '施設名';
-                            break;
-                        case 'address':
-                            icon = '📍';
-                            label = '住所';
-                            break;
-                        case 'phone':
-                        case 'tel':
-                            icon = '📞';
-                            label = '電話番号';
-                            break;
-                        case 'email':
-                            icon = '📧';
-                            label = 'メール';
-                            break;
-                        case 'website':
-                        case 'url':
-                            icon = '🌐';
-                            label = 'ウェブサイト';
-                            break;
-                        case 'type':
-                            icon = '🏷️';
-                            label = '種別';
-                            break;
-                        case 'country':
-                            icon = '🇯🇵';
-                            label = '国';
-                            break;
-                    }
-                    
-                    popupContent += `
-                        <div style="
-                            display: flex;
-                            align-items: flex-start;
-                            margin-bottom: 12px;
-                            padding: 8px;
-                            background: #f8f9fa;
-                            border-radius: 8px;
-                            border-left: 3px solid #667eea;
-                        ">
-                            <span style="
-                                font-size: 16px;
-                                margin-right: 10px;
-                                margin-top: 2px;
-                            ">${icon}</span>
-                            <div style="flex: 1;">
-                                <div style="
-                                    font-size: 12px;
-                                    color: #6c757d;
-                                    font-weight: 500;
-                                    margin-bottom: 4px;
-                                    text-transform: uppercase;
-                                    letter-spacing: 0.5px;
-                                ">${label}</div>
-                                <div style="
-                                    font-size: 14px;
-                                    color: #2c3e50;
-                                    line-height: 1.4;
-                                    word-break: break-word;
-                                ">${value}</div>
-                            </div>
-                        </div>
-                    `;
-                });
+                if (displayProperties.length > 0) {
+                    popupContent += `<table class="popup-properties-table">`;
+                    displayProperties.forEach(([key, value]) => {
+                        popupContent += `
+                            <tr>
+                                <td>${key}</td>
+                                <td>${value}</td>
+                            </tr>
+                        `;
+                    });
+                    popupContent += `</table>`;
+                }
 
                 // 収鋲状態表示
                 if (isAlreadyShubyo) {
                     popupContent += `
-                        <div style="
-                            background: linear-gradient(135deg, #d4edda, #c3e6cb);
-                            border: 1px solid #c3e6cb;
-                            border-radius: 8px;
-                            padding: 12px;
-                            margin: 12px 0;
-                            display: flex;
-                            align-items: center;
-                        ">
-                            <span style="
-                                font-size: 20px;
-                                margin-right: 10px;
-                            ">✅</span>
-                            <div>
-                                <div style="
-                                    font-weight: 600;
-                                    color: #155724;
-                                    font-size: 14px;
-                                ">収鋲済み</div>
-                                <div style="
-                                    font-size: 12px;
-                                    color: #155724;
-                                    opacity: 0.8;
-                                ">このポイントは既に収鋲されています</div>
-                            </div>
+                        <div class="popup-status">
+                            <span class="popup-status-icon">✅</span>
+                            <div class="popup-status-text">収鋲済み</div>
                         </div>
                     `;
                 }
 
                 // ボタン部分
                 popupContent += `
-                            <div style="
-                                display: flex;
-                                flex-direction: column;
-                                gap: 8px;
-                                margin-top: 16px;
-                            ">
+                            <div class="popup-buttons">
                 `;
 
                 // Googleマップで開くボタン（常に表示）
@@ -905,108 +814,40 @@ class GeoJSONMapViewer {
                 const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${coordinates[1]},${coordinates[0]}`;
                 
                 popupContent += `
-                    <button onclick="window.open('${googleMapsUrl}', '_blank');" 
-                        style="
-                            background: linear-gradient(135deg, #34a853, #2d8f47);
-                            color: white;
-                            border: none;
-                            padding: 10px 16px;
-                            border-radius: 8px;
-                            cursor: pointer;
-                            font-size: 13px;
-                            font-weight: 600;
-                            transition: all 0.3s ease;
-                            box-shadow: 0 2px 8px rgba(52, 168, 83, 0.3);
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            gap: 6px;
-                        "
-                        onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(52, 168, 83, 0.4)';"
-                        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(52, 168, 83, 0.3)';"
-                    >
-                        <span style="font-size: 14px;">🗺️</span>
+                    <button onclick="window.open('${googleMapsUrl}', '_blank');" class="popup-btn popup-btn-google">
+                        <span class="popup-btn-icon">🗺️</span>
                         Googleマップで開く
                     </button>
                 `;
 
-                // 収鋲/収鋲解除ボタンのコンテナ
-                popupContent += `
-                    <div style="
-                        display: flex;
-                        gap: 8px;
-                    ">
-                `;
-
+                // 収鋲/収鋲解除ボタン
                 if (isAlreadyShubyo) {
                     // 収鋲解除ボタン
                     popupContent += `
-                        <button onclick="window.mapViewer.removeShubyoFromLocation('${metadataId}', '${featureId}', '${locationName.replace(/'/g, "\\'")}'); document.querySelector('.maplibregl-popup').remove();" 
-                            style="
-                                flex: 1;
-                                background: linear-gradient(135deg, #e74c3c, #c0392b);
-                                color: white;
-                                border: none;
-                                padding: 12px 16px;
-                                border-radius: 8px;
-                                cursor: pointer;
-                                font-size: 14px;
-                                font-weight: 600;
-                                transition: all 0.3s ease;
-                                box-shadow: 0 2px 8px rgba(231, 76, 60, 0.3);
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                gap: 6px;
-                            "
-                            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(231, 76, 60, 0.4)';"
-                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(231, 76, 60, 0.3)';"
-                        >
-                            <span style="font-size: 16px;">🗑️</span>
+                        <button onclick="window.mapViewer.removeShubyoFromLocation('${metadataId}', '${featureId}', '${locationName.replace(/'/g, "\\'")}'); document.querySelector('.maplibregl-popup').remove();" class="popup-btn popup-btn-remove">
+                            <span class="popup-btn-icon">🗑️</span>
                             収鋲解除
                         </button>
                     `;
                 } else {
                     // 収鋲ボタン
                     popupContent += `
-                        <button onclick="window.mapViewer.shubyoToLocation('${metadataId}', '${featureId}', '${locationName.replace(/'/g, "\\'")}'); document.querySelector('.maplibregl-popup').remove();" 
-                            style="
-                                flex: 1;
-                                background: linear-gradient(135deg, #3498db, #2980b9);
-                                color: white;
-                                border: none;
-                                padding: 12px 16px;
-                                border-radius: 8px;
-                                cursor: pointer;
-                                font-size: 14px;
-                                font-weight: 600;
-                                transition: all 0.3s ease;
-                                box-shadow: 0 2px 8px rgba(52, 152, 219, 0.3);
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                gap: 6px;
-                            "
-                            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(52, 152, 219, 0.4)';"
-                            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(52, 152, 219, 0.3)';"
-                        >
-                            <span style="font-size: 16px;">📍</span>
+                        <button onclick="window.mapViewer.shubyoToLocation('${metadataId}', '${featureId}', '${locationName.replace(/'/g, "\\'")}'); document.querySelector('.maplibregl-popup').remove();" class="popup-btn popup-btn-add">
+                            <span class="popup-btn-icon">📍</span>
                             収鋲する
                         </button>
                     `;
                 }
 
+                // ボタンエリアとコンテンツ部分を閉じる
                 popupContent += `
-                    </div>
-                </div>`;
-
-                popupContent += `
+                            </div>
                         </div>
                     </div>
                 `;
 
                 const popup = new maplibregl.Popup({
-                    maxWidth: '400px',
+                    maxWidth: '280px',
                     className: 'rich-popup'
                 })
                     .setLngLat(e.lngLat)
@@ -1098,6 +939,7 @@ class GeoJSONMapViewer {
             position: fixed;
             top: 20px;
             right: 20px;
+            left: 80px;
             background: #ff6b6b;
             color: white;
             padding: 10px 15px;
@@ -1324,6 +1166,7 @@ class GeoJSONMapViewer {
             position: fixed;
             top: 20px;
             right: 20px;
+            left: 80px;
             background: #28a745;
             color: white;
             padding: 10px 15px;
