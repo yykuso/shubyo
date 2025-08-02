@@ -13,7 +13,7 @@ class GeoJSONMapViewer {
         this.initMap();
         this.initUI();
         this.initSidebarToggle();
-        
+
         // ページ読み込み完了後にトランジションを有効化
         setTimeout(() => {
             document.body.classList.remove('preload');
@@ -73,7 +73,7 @@ class GeoJSONMapViewer {
     initMap() {
         // 保存されたマップ状態を読み込み
         const savedMapState = this.loadMapState();
-        
+
         this.map = new maplibregl.Map({
             container: 'map',
             style: MAP_CONFIG.style,
@@ -85,7 +85,7 @@ class GeoJSONMapViewer {
 
         this.map.addControl(new maplibregl.NavigationControl(), 'bottom-right');
         this.map.addControl(new maplibregl.ScaleControl(), 'bottom-left');
-        
+
         // 位置情報コントロールを追加
         this.map.addControl(new maplibregl.GeolocateControl({
             positionOptions: {
@@ -113,23 +113,23 @@ class GeoJSONMapViewer {
 
     async initUI() {
         const layerControlsContainer = document.getElementById('layer-controls');
-        
+
         // 保存されたレイヤー状態を読み込み
         const savedLayerStates = this.loadLayerStates();
-        
+
         // 各レイヤーの設定を非同期で処理
         for (const layer of LAYER_CONFIG) {
             await this.loadLayerMetadata(layer);
-            
+
             // 保存された状態があれば適用
             if (savedLayerStates[layer.id]) {
                 layer.visible = savedLayerStates[layer.id].visible;
             }
-            
+
             const controlElement = this.createLayerControl(layer);
             layerControlsContainer.appendChild(controlElement);
         }
-        
+
         // レイヤーコントロールの後にエクスポート/インポートボタンを追加
         this.createDataManagementButtons(layerControlsContainer);
     }
@@ -144,9 +144,9 @@ class GeoJSONMapViewer {
             if (!response.ok) {
                 throw new Error(`Failed to load metadata from ${layer.source}: ${response.status}`);
             }
-            
+
             const geojsonData = await response.json();
-            
+
             // metadataがある場合は使用、なければデフォルト値を設定
             if (geojsonData.metadata) {
                 layer.name = geojsonData.metadata.name || `レイヤー ${layer.id}`;
@@ -157,7 +157,7 @@ class GeoJSONMapViewer {
                 layer.name = `レイヤー ${layer.id}`;
                 layer.description = 'GeoJSONデータ';
             }
-            
+
         } catch (error) {
             console.error(`Error loading metadata for layer ${layer.id}:`, error);
             // エラーの場合はデフォルト値を設定
@@ -258,7 +258,7 @@ class GeoJSONMapViewer {
 
     toggleLayerMetadata(layerId) {
         const metadataDiv = document.getElementById(`metadata-${layerId}`);
-        
+
         if (metadataDiv.classList.contains('visible')) {
             metadataDiv.classList.remove('visible');
         } else {
@@ -276,7 +276,7 @@ class GeoJSONMapViewer {
 
         const geojsonData = this.layerData.get(layerId);
         const layer = LAYER_CONFIG.find(l => l.id === layerId);
-        
+
         if (!geojsonData || !layer) return;
 
         const content = document.createElement('div');
@@ -286,15 +286,15 @@ class GeoJSONMapViewer {
             if (value) {
                 const item = document.createElement('div');
                 item.className = 'metadata-item';
-                
+
                 const labelSpan = document.createElement('span');
                 labelSpan.className = 'metadata-label';
                 labelSpan.textContent = label + ':';
-                
+
                 const valueSpan = document.createElement('span');
                 valueSpan.className = 'metadata-value';
                 valueSpan.textContent = value;
-                
+
                 item.appendChild(labelSpan);
                 item.appendChild(valueSpan);
                 content.appendChild(item);
@@ -303,14 +303,14 @@ class GeoJSONMapViewer {
 
         // GeoJSONのメタデータから情報を取得
         const metadata = geojsonData.metadata || {};
-        
+
         // nameとdescription以外のメタデータを表示
         Object.keys(metadata).forEach(key => {
             if (key !== 'name' && key !== 'description') {
                 addMetadataItem(key, metadata[key]);
             }
         });
-        
+
         // フィーチャー数
         const featureCount = geojsonData.features ? geojsonData.features.length : 0;
         addMetadataItem('features', `${featureCount}`);
@@ -322,7 +322,7 @@ class GeoJSONMapViewer {
         const controlDiv = document.getElementById(`control-${layerId}`);
         const filtersDiv = document.getElementById(`filters-${layerId}`);
         const filterButton = document.getElementById(`filter-btn-${layerId}`);
-        
+
         if (filtersDiv.classList.contains('visible')) {
             filtersDiv.classList.remove('visible');
             controlDiv.classList.remove('expanded');
@@ -356,7 +356,7 @@ class GeoJSONMapViewer {
         }
 
         this.layerTypes.set(layerId, types);
-        
+
         // 保存されたフィルター状態を復元
         const savedLayerStates = this.loadLayerStates();
         const savedFilters = savedLayerStates[layerId]?.activeFilters || [];
@@ -377,12 +377,12 @@ class GeoJSONMapViewer {
             const tag = document.createElement('div');
             tag.className = 'layer-filter-tag';
             tag.textContent = type;
-            
+
             // 保存されたフィルター状態を反映
             if (savedFilters.includes(type)) {
                 tag.classList.add('active');
             }
-            
+
             tag.addEventListener('click', () => {
                 this.toggleLayerTypeFilter(layerId, type, tag);
             });
@@ -399,14 +399,14 @@ class GeoJSONMapViewer {
         filtersDiv.appendChild(title);
         filtersDiv.appendChild(controlsDiv);
         filtersDiv.appendChild(clearButton);
-        
+
         // フィルターを適用
         this.updateLayerFilter(layerId);
     }
 
     toggleLayerTypeFilter(layerId, type, element) {
         const activeFilters = this.activeLayerFilters.get(layerId);
-        
+
         if (activeFilters.has(type)) {
             activeFilters.delete(type);
             element.classList.remove('active');
@@ -414,9 +414,9 @@ class GeoJSONMapViewer {
             activeFilters.add(type);
             element.classList.add('active');
         }
-        
+
         this.updateLayerFilter(layerId);
-        
+
         // フィルター状態を保存
         this.saveLayerStates();
     }
@@ -424,35 +424,38 @@ class GeoJSONMapViewer {
     clearLayerFilters(layerId) {
         const activeFilters = this.activeLayerFilters.get(layerId);
         activeFilters.clear();
-        
+
         const controlsDiv = document.querySelector(`#filters-${layerId} .layer-filter-controls`);
         if (controlsDiv) {
             controlsDiv.querySelectorAll('.layer-filter-tag').forEach(tag => {
                 tag.classList.remove('active');
             });
         }
-        
+
         this.updateLayerFilter(layerId);
-        
+
         // フィルター状態を保存
         this.saveLayerStates();
     }
 
     getLayerColor(layer) {
-        // まずGeoJSONデータからmetadataのcolorを取得を試みる
+        // まずlayers.js側の設定から取得（優先）
+        if (layer.style.paint) {
+            const color = layer.style.paint['circle-color'] ||
+                         layer.style.paint['line-color'] ||
+                         layer.style.paint['fill-color'];
+            if (color) {
+                return color;
+            }
+        }
+
+        // フォールバック：GeoJSONデータのmetadataのcolorを取得
         const layerId = layer.id;
         const geojsonData = this.layerData.get(layerId);
         if (geojsonData?.metadata?.color) {
             return geojsonData.metadata.color;
         }
-        
-        // フォールバック：レイヤー設定から取得
-        if (layer.style.paint) {
-            return layer.style.paint['circle-color'] || 
-                   layer.style.paint['line-color'] || 
-                   layer.style.paint['fill-color'] || 
-                   '#000000';
-        }
+
         return '#000000';
     }
 
@@ -491,7 +494,7 @@ class GeoJSONMapViewer {
             if (!response.ok) {
                 throw new Error(`Failed to load ${layer.source}: ${response.status}`);
             }
-            
+
             const geojsonData = await response.json();
 
             // 重複座標の調整を適用
@@ -506,25 +509,13 @@ class GeoJSONMapViewer {
                 data: geojsonData
             });
 
-            // metadataからカラーを取得（ない場合は黒を使用）
-            const mainColor = geojsonData.metadata?.color || '#000000';
-            
-            // レイヤーのスタイルをコピーして、metadataのcolorを適用
-            const layerStyle = {
-                ...layer.style,
-                paint: {
-                    ...layer.style.paint,
-                    'circle-color': mainColor
-                }
-            };
-
-            // レイヤーを追加
+            // レイヤーを追加（layers.jsの設定をそのまま使用）
             this.map.addLayer({
                 id: layer.id,
-                type: layerStyle.type,
+                type: layer.style.type,
                 source: layer.id,
-                paint: layerStyle.paint,
-                layout: layerStyle.layout || {}
+                paint: layer.style.paint,
+                layout: layer.style.layout || {}
             });
 
             // 収鋲状態に応じたスタイルを適用
@@ -545,7 +536,7 @@ class GeoJSONMapViewer {
 
     updateLayerFilter(layerId) {
         const activeFilters = this.activeLayerFilters.get(layerId);
-        
+
         if (!activeFilters || activeFilters.size === 0) {
             // フィルターがない場合は全て表示
             this.map.setFilter(layerId, null);
@@ -566,12 +557,12 @@ class GeoJSONMapViewer {
 
         // 座標をキーとして、同じ座標のポイントをグループ化
         const coordinateGroups = new Map();
-        
+
         geojsonData.features.forEach((feature, index) => {
             if (feature.geometry && feature.geometry.type === 'Point') {
                 const coordinates = feature.geometry.coordinates;
                 const key = `${coordinates[0]},${coordinates[1]}`;
-                
+
                 if (!coordinateGroups.has(key)) {
                     coordinateGroups.set(key, []);
                 }
@@ -587,26 +578,26 @@ class GeoJSONMapViewer {
             if (group.length > 1) {
                 // 元の座標
                 const [originalLng, originalLat] = group[0].feature.geometry.coordinates;
-                
+
                 // 円形に配置するためのオフセット計算
                 const offsetDistance = 0.0001; // 約11メートル程度のオフセット
                 const angleStep = (2 * Math.PI) / group.length;
-                
+
                 group.forEach((item, index) => {
                     if (index === 0) {
                         // 最初のポイントは元の位置のまま
                         return;
                     }
-                    
+
                     // 円形にポイントを配置
                     const angle = angleStep * index;
                     const offsetLng = originalLng + (offsetDistance * Math.cos(angle));
                     const offsetLat = originalLat + (offsetDistance * Math.sin(angle));
-                    
+
                     // 座標を更新
                     item.feature.geometry.coordinates = [offsetLng, offsetLat];
                 });
-                
+
                 // console.log(`Adjusted ${group.length} overlapping points at ${coordinateKey}`);
             }
         });
@@ -744,7 +735,7 @@ class GeoJSONMapViewer {
                 const properties = feature.properties;
                 const featureId = properties.id;
                 const locationName = properties.name;
-                
+
                 // 収鋲状態を確認
                 const metadataId = metadata?.id;
                 let isAlreadyShubyo = false;
@@ -771,13 +762,13 @@ class GeoJSONMapViewer {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- コンテンツ部分 -->
                         <div class="popup-content">
                 `;
 
                 // プロパティを整理して表示（iconは除外）
-                const displayProperties = Object.entries(properties).filter(([key, value]) => 
+                const displayProperties = Object.entries(properties).filter(([key, value]) =>
                     key !== 'id' && key !== 'name' && key !== 'icon' && value && value.toString().trim() !== ''
                 );
 
@@ -812,7 +803,7 @@ class GeoJSONMapViewer {
                 // Googleマップで開くボタン（常に表示）
                 const coordinates = feature.geometry.coordinates;
                 const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${coordinates[1]},${coordinates[0]}`;
-                
+
                 popupContent += `
                     <button onclick="window.open('${googleMapsUrl}', '_blank');" class="popup-btn popup-btn-google">
                         <span class="popup-btn-icon">🗺️</span>
@@ -921,14 +912,14 @@ class GeoJSONMapViewer {
 
     saveLayerStates() {
         const layerStates = {};
-        
+
         LAYER_CONFIG.forEach(layer => {
             layerStates[layer.id] = {
                 visible: layer.visible,
                 activeFilters: Array.from(this.activeLayerFilters.get(layer.id) || [])
             };
         });
-        
+
         localStorage.setItem('shubyo-layer-states', JSON.stringify(layerStates));
     }
 
@@ -962,7 +953,7 @@ class GeoJSONMapViewer {
         LAYER_CONFIG.push(layerConfig);
         const controlElement = this.createLayerControl(layerConfig);
         document.getElementById('layer-controls').appendChild(controlElement);
-        
+
         if (layerConfig.visible) {
             await this.loadLayer(layerConfig);
             this.showLayer(layerConfig.id);
@@ -1018,7 +1009,7 @@ class GeoJSONMapViewer {
 
     saveMapState() {
         if (!this.map) return;
-        
+
         const mapState = {
             center: this.map.getCenter(),
             zoom: this.map.getZoom(),
@@ -1026,7 +1017,7 @@ class GeoJSONMapViewer {
             pitch: this.map.getPitch(),
             timestamp: Date.now()
         };
-        
+
         localStorage.setItem('shubyo-map-state', JSON.stringify(mapState));
     }
 
@@ -1037,29 +1028,29 @@ class GeoJSONMapViewer {
             this.showSuccessMessage('収鋲に失敗しました：レイヤーIDが無効です');
             return;
         }
-        
+
         if (!featureId || featureId === '' || featureId === 'undefined') {
             console.error('Invalid featureId:', featureId);
             this.showSuccessMessage('収鋲に失敗しました：フィーチャーIDが無効です');
             return;
         }
-        
+
         // シンプルなJSON形式で保存: {metadataId: [id1, id2, id3]}
         if (!this.checkinData[layerId]) {
             this.checkinData[layerId] = [];
         }
-        
+
         // featureIdを文字列として保存
         const featureIdStr = String(featureId);
-        
+
         // 重複チェック
         if (!this.checkinData[layerId].includes(featureIdStr)) {
             this.checkinData[layerId].push(featureIdStr);
         }
-        
+
         this.saveShubyoData();
         this.showSuccessMessage(`${locationName}を収鋲しました！`);
-        
+
         // 収鋲後にスタイルを更新
         this.updateAllShubyoStyles();
     }
@@ -1071,29 +1062,29 @@ class GeoJSONMapViewer {
             this.showSuccessMessage('収鋲解除に失敗しました：レイヤーIDが無効です');
             return;
         }
-        
+
         if (!featureId || featureId === '' || featureId === 'undefined') {
             console.error('Invalid featureId:', featureId);
             this.showSuccessMessage('収鋲解除に失敗しました：フィーチャーIDが無効です');
             return;
         }
-        
+
         // 収鋲データが存在しない場合は何もしない
         if (!this.checkinData[layerId]) {
             this.showSuccessMessage(`${locationName}は収鋲されていません`);
             return;
         }
-        
+
         // featureIdを文字列として処理
         const featureIdStr = String(featureId);
-        
+
         // 配列から該当のIDを削除
         const index = this.checkinData[layerId].indexOf(featureIdStr);
         if (index > -1) {
             this.checkinData[layerId].splice(index, 1);
             this.saveShubyoData();
             this.showSuccessMessage(`${locationName}の収鋲を解除しました！`);
-            
+
             // 収鋲解除後にスタイルを更新
             this.updateAllShubyoStyles();
         } else {
@@ -1113,13 +1104,13 @@ class GeoJSONMapViewer {
 
     updateShubyoStyle(layerId, metadata) {
         if (!this.map.getLayer(layerId) || !metadata?.id) return;
-        
+
         const shubyoIds = this.checkinData[metadata.id] || [];
-        
+
         if (shubyoIds.length > 0) {
             // 文字列と数値の両方に対応するため、すべて文字列に変換
             const shubyoIdsAsStrings = shubyoIds.map(id => String(id));
-            
+
             // 収鋲済みのポイントをソフトな赤色にするフィルター式
             const strokeColorExpression = [
                 'case',
@@ -1127,7 +1118,7 @@ class GeoJSONMapViewer {
                 '#ff6b6b', // 収鋲済みはソフトな赤色
                 'rgba(255, 255, 255, 0.8)'  // 未収鋲は半透明の白色
             ];
-            
+
             // ストローク幅も調整（より細く）
             const strokeWidthExpression = [
                 'case',
@@ -1135,11 +1126,11 @@ class GeoJSONMapViewer {
                 2.5, // 収鋲済みは少し太め
                 1.5  // 未収鋲は細め
             ];
-            
+
             // circle-stroke-colorとwidthを動的に設定
             this.map.setPaintProperty(layerId, 'circle-stroke-color', strokeColorExpression);
             this.map.setPaintProperty(layerId, 'circle-stroke-width', strokeWidthExpression);
-            
+
             // 円の透明度も少し調整
             this.map.setPaintProperty(layerId, 'circle-opacity', 0.9);
             this.map.setPaintProperty(layerId, 'circle-stroke-opacity', 0.8);
@@ -1195,10 +1186,10 @@ class GeoJSONMapViewer {
             };
 
             const dataStr = JSON.stringify(exportData, null, 2);
-            
+
             // モバイル対応のテキストエクスポート
             this.showTextExportModal(dataStr, exportData.totalPoints);
-            
+
         } catch (error) {
             console.error('Export error:', error);
             this.showErrorMessage('エクスポートに失敗しました');
@@ -1395,7 +1386,7 @@ class GeoJSONMapViewer {
         });
 
         document.body.appendChild(modalOverlay);
-        
+
         // テキストエリアを選択状態にする
         setTimeout(() => textarea.select(), 100);
     }
@@ -1616,7 +1607,7 @@ class GeoJSONMapViewer {
 
         try {
             const importData = JSON.parse(dataText);
-            
+
             // データ形式の検証
             if (!importData.shubyoData || typeof importData.shubyoData !== 'object') {
                 throw new Error('無効なデータ形式です');
@@ -1625,14 +1616,14 @@ class GeoJSONMapViewer {
             // 確認ダイアログ
             const currentPoints = Object.values(this.checkinData).reduce((sum, points) => sum + points.length, 0);
             const importPoints = Object.values(importData.shubyoData).reduce((sum, points) => sum + points.length, 0);
-            
+
             const confirmMessage = `現在の収鋲データ（${currentPoints}ポイント）を、インポートデータ（${importPoints}ポイント）で置き換えますか？\n\n※この操作は元に戻せません。`;
-            
+
             if (confirm(confirmMessage)) {
                 this.checkinData = importData.shubyoData;
                 this.saveShubyoData();
                 this.updateAllShubyoStyles();
-                
+
                 this.showSuccessMessage(`収鋲データをインポートしました（${importPoints}ポイント）`);
             }
         } catch (error) {
@@ -1644,19 +1635,19 @@ class GeoJSONMapViewer {
     // 全収鋲データのクリア
     clearAllShubyoData() {
         const currentPoints = Object.values(this.checkinData).reduce((sum, points) => sum + points.length, 0);
-        
+
         if (currentPoints === 0) {
             this.showSuccessMessage('削除する収鋲データがありません');
             return;
         }
 
         const confirmMessage = `すべての収鋲データ（${currentPoints}ポイント）を削除しますか？\n\n※この操作は元に戻せません。`;
-        
+
         if (confirm(confirmMessage)) {
             this.checkinData = {};
             this.saveShubyoData();
             this.updateAllShubyoStyles();
-            
+
             this.showSuccessMessage(`すべての収鋲データを削除しました（${currentPoints}ポイント）`);
         }
     }

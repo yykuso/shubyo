@@ -3,17 +3,31 @@
 
 const LAYER_CONFIG = [
     {
-        id: 'foreign-embassy',
-        name: null, // GeoJSONファイルから取得
-        description: null, // GeoJSONファイルから取得
+        id: 'city-hall',
         type: 'geojson',
-        source: 'data/foreign-embassy.geojson',
+        source: 'data/city-hall.geojson',
         geometryType: 'Point',
         visible: true,
         style: {
             type: 'circle',
             paint: {
-                'circle-radius': 6,
+                'circle-radius': 5,
+                'circle-color': '#dd0000',
+                'circle-stroke-width': 2,
+                'circle-stroke-color': '#ffffff'
+            }
+        }
+    },
+    {
+        id: 'foreign-embassy',
+        type: 'geojson',
+        source: 'data/foreign-embassy.geojson',
+        geometryType: 'Point',
+        visible: false,
+        style: {
+            type: 'circle',
+            paint: {
+                'circle-radius': 5,
                 'circle-color': '#9b59b6',
                 'circle-stroke-width': 2,
                 'circle-stroke-color': '#ffffff'
