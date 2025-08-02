@@ -744,8 +744,12 @@ class GeoJSONMapViewer {
                     isAlreadyShubyo = history.length > 0;
                 }
 
-                // メタデータからメインカラーを取得（ない場合は黒を設定）
-                const mainColor = metadata?.color || '#000000';
+                // layers.jsからメインカラーを取得
+                const mainColor = this.getLayerColor(layer);
+
+                // レイヤーデータからデフォルトアイコンを取得
+                const geojsonData = this.layerData.get(layer.id);
+                const defaultIcon = geojsonData?.metadata?.defaultIcon || '📍';
 
                 // コンパクトなポップアップコンテンツを作成
                 let popupContent = `
@@ -754,7 +758,7 @@ class GeoJSONMapViewer {
                         <div class="popup-header">
                             <div class="popup-header-content">
                                 <div class="popup-icon" style="background: linear-gradient(135deg, ${mainColor}, ${this.getDarkerColor(mainColor)});">
-                                    ${properties.icon || '📍'}
+                                    ${properties.icon || defaultIcon}
                                 </div>
                                 <div class="popup-info">
                                     <h3 class="popup-title">${locationName}</h3>

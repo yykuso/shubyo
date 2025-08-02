@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"metadata": { "id": 1, "name": "駐日外国公館", "description": "駐日外国公館のデータ", "updated": "2025-07-22" },
+"metadata": { "id": 1, "name": "駐日外国公館", "description": "駐日外国公館のデータ", "updated": "2025-07-22", "defaultIcon": "🏛️" },
 "name": "foreign-embassy",
 "features": [
 { "type": "Feature", "properties": { "id": 1, "type": "大使館", "icon": "🇮🇳", "country": "インド", "name": "インド大使館", "address": "東京都千代田区九段南2-2-11" }, "geometry": { "type": "Point", "coordinates": [ 139.747255534814997, 35.694028750093182 ] } },

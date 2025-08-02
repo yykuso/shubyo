@@ -1,6 +1,6 @@
 {
 "type": "FeatureCollection",
-"metadata": { "id": 2, "name": "市町村役場", "description": "市町村役場の本庁、支所、出張所、連絡所", "updated": "2025-08-02", "source": "国土数値情報（2022年）" },
+"metadata": { "id": 2, "name": "市町村役場", "description": "市町村役場の本庁、支所、出張所、連絡所", "updated": "2025-08-02", "source": "国土数値情報（2022年）", "defaultIcon": "🏛️" },
 "name": "city-hall",
 "features": [
 { "type": "Feature", "properties": { "id":1, "type": "本庁", "name": "札幌市中央区役所", "address": "札幌市中央区大通西2-9" }, "geometry": { "type": "Point", "coordinates": [ 141.341005, 43.05536 ] } },
